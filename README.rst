@@ -3,10 +3,10 @@ Quick start
 
 |License| |Pyup|
 
-.. |License| image:: https://img.shields.io/github/license/cusyio/slides.svg
-   :target: https://github.com/cusyio/slides/blob/main/LICENSE
-.. |Pyup| image:: https://pyup.io/repos/github/cusyio/slides/shield.svg
-   :target: https://pyup.io/repos/github/cusyio/slides/
+.. |License| image:: https://img.shields.io/github/license/cusyio/jupyter-reveal.svg
+   :target: https://github.com/cusyio/jupyter-reveal/blob/main/LICENSE
+.. |Pyup| image:: https://pyup.io/repos/github/cusyio/jupyter-reveal/shield.svg
+   :target: https://pyup.io/repos/github/cusyio/jupyter-reveal/
 
 Installation
 ------------
