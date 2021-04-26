@@ -31,10 +31,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --heading-text-shadow: none;
   --heading-font-weight: 800;
   --heading1-text-shadow: none;
-  --heading1-size: 2.62em;
-  --heading2-size: 2.13em;
-  --heading3-size: 1.62em;
-  --heading4-size: 1.31em;
+  --heading1-size: 2.13em;
+  --heading2-size: 1.62em;
+  --heading3-size: 1.31em;
+  --heading4-size: 1em;
   --code-font: monospace;
   --link-color: #843AFF;
   --link-color-hover: #c4a0ff;
@@ -86,16 +86,16 @@ section.has-light-background, section.has-light-background h1, section.has-light
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.62em; }
-
-.reveal h2 {
   font-size: 2.13em; }
 
-.reveal h3 {
+.reveal h2 {
   font-size: 1.62em; }
 
-.reveal h4 {
+.reveal h3 {
   font-size: 1.31em; }
+
+.reveal h4 {
+  font-size: 1em; }
 
 .reveal h1 {
   text-shadow: none; }
