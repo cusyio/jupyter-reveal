@@ -125,6 +125,11 @@ Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
     <link rel="stylesheet" href="../dist/theme/cusy.css" id="theme">
     </head>
     …
+#. Remove Jupyter styles
+
+   The styles were swapped out to ``dist/theme/jupyter.css`` and then adapted
+   for the Cusy style. Therefore you should delete the style instructions from
+   about line 68–14379 in your HTML file.
 
 #. Create a PDF file:
 
