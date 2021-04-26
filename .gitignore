@@ -3,3 +3,8 @@
 
 # IPython
 .ipynb_checkpoints
+
+# node etc.
+node_modules/
+.sass-cache
+dist/*.map

@@ -114,8 +114,53 @@ Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
 
     $ pipenv run jupyter nbconvert my-slides.ipynb --to slides --post serve
 
+#. Fix link to cusy styles
+
+   In the generated ``.html`` file you have to insert the link to the CSS file
+   before the body tag:
+
+   .. code-block:: html
+
+    …
+    <link rel="stylesheet" href="../dist/theme/cusy.css" id="theme">
+    </head>
+    …
+
 #. Create a PDF file:
 
    #. Open the ``.html`` file
    #. Add ``?print-pdf`` to the URL.
    #. Print to PDF with background images.
+
+Update styles
+-------------
+
+#. Install Sass
+
+   .. code-block:: console
+
+    $ npm install
+
+    added 860 packages, and audited 927 packages in 3m
+
+    1 low severity vulnerability
+
+    To address all issues, run:
+      npm audit fix
+
+    Run `npm audit` for details.
+
+#. Generate the CSS theme
+
+   .. code-block:: console
+
+    $ npm run build -- css-themes
+
+    > reveal.js@4.1.0 build
+    > gulp "css-themes"
+
+    [22:14:52] Using gulpfile ~/cusy/comm/slides/reveal.js/gulpfile.js
+    [22:14:52] Starting 'css-themes'...
+    [22:14:52] Finished 'css-themes' after 64 ms
+
+   This generates the CSS file ``dist/theme/cusy.css``.

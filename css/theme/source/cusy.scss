@@ -1,0 +1,59 @@
+/**
+ * Cusy theme for reveal.js.
+ * Author: Veit Schiele
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=mplus-1p:500,800);
+
+/**
+ * Cusy colors
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+
+// Primary/body text
+$headingFont: 'mplus-1p', sans-serif;
+$headingFontWeight: 800;
+$mainFont: 'mplus-1p', sans-serif;
+$mainFontSize: 40px;
+$mainColor: #fff;
+$awardColor: #843AFF;
+$complementaryColor: #6DF100;
+$backgroundColor: #121212;
+
+// Headings
+$headingColor: $awardColor;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$heading1Size: 2.13em;
+$heading2Size: 1.62em;
+$heading3Size: 1.31em;
+$heading4Size: 1.00em;
+
+$codeFont: monospace;
+
+// Links and actions
+$linkColor: $awardColor;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionColor: $mainColor;
+$selectionBackgroundColor: $complementaryColor;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#121212);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
