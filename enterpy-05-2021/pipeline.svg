@@ -1,66 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="156pt" height="332pt" viewBox="0.00 0.00 156.19 332.00">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
 <title>%3</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-328 152.1869,-328 152.1869,4 -4,4"/>
+<polygon fill="transparent" stroke="transparent" points="-4,4 -4,-328 152.1869,-328 152.1869,4 -4,4"/>
 <!-- data/data.xml.dvc -->
 <g id="node1" class="node">
 <title>data/data.xml.dvc</title>
-<ellipse fill="none" stroke="#000000" cx="74.0934" cy="-306" rx="74.187" ry="18"/>
-<text text-anchor="middle" x="74.0934" y="-302.3" font-family="Times,serif" font-size="14.00" fill="#000000">data/data.xml.dvc</text>
+<ellipse fill="none" stroke="white" cx="74.0934" cy="-306" rx="74.187" ry="18"/>
+<text text-anchor="middle" x="74.0934" y="-302.3" font-family="Times,serif" font-size="14.00" fill="white">data/data.xml.dvc</text>
 </g>
 <!-- split -->
 <g id="node2" class="node">
 <title>split</title>
-<ellipse fill="none" stroke="#000000" cx="74.0934" cy="-234" rx="27" ry="18"/>
-<text text-anchor="middle" x="74.0934" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#000000">split</text>
+<ellipse fill="none" stroke="white" cx="74.0934" cy="-234" rx="27" ry="18"/>
+<text text-anchor="middle" x="74.0934" y="-230.3" font-family="Times,serif" font-size="14.00" fill="white">split</text>
 </g>
 <!-- data/data.xml.dvc&#45;&gt;split -->
 <g id="edge1" class="edge">
 <title>data/data.xml.dvc-&gt;split</title>
-<path fill="none" stroke="#000000" d="M74.0934,-287.8314C74.0934,-280.131 74.0934,-270.9743 74.0934,-262.4166"/>
-<polygon fill="#000000" stroke="#000000" points="77.5935,-262.4132 74.0934,-252.4133 70.5935,-262.4133 77.5935,-262.4132"/>
+<path fill="none" stroke="white" d="M74.0934,-287.8314C74.0934,-280.131 74.0934,-270.9743 74.0934,-262.4166"/>
+<polygon fill="white" stroke="white" points="77.5935,-262.4132 74.0934,-252.4133 70.5935,-262.4133 77.5935,-262.4132"/>
 </g>
 <!-- featurize -->
 <g id="node4" class="node">
 <title>featurize</title>
-<ellipse fill="none" stroke="#000000" cx="74.0934" cy="-162" rx="41.6928" ry="18"/>
-<text text-anchor="middle" x="74.0934" y="-158.3" font-family="Times,serif" font-size="14.00" fill="#000000">featurize</text>
+<ellipse fill="none" stroke="white" cx="74.0934" cy="-162" rx="41.6928" ry="18"/>
+<text text-anchor="middle" x="74.0934" y="-158.3" font-family="Times,serif" font-size="14.00" fill="white">featurize</text>
 </g>
 <!-- split&#45;&gt;featurize -->
 <g id="edge2" class="edge">
 <title>split-&gt;featurize</title>
-<path fill="none" stroke="#000000" d="M74.0934,-215.8314C74.0934,-208.131 74.0934,-198.9743 74.0934,-190.4166"/>
-<polygon fill="#000000" stroke="#000000" points="77.5935,-190.4132 74.0934,-180.4133 70.5935,-190.4133 77.5935,-190.4132"/>
+<path fill="none" stroke="white" d="M74.0934,-215.8314C74.0934,-208.131 74.0934,-198.9743 74.0934,-190.4166"/>
+<polygon fill="white" stroke="white" points="77.5935,-190.4132 74.0934,-180.4133 70.5935,-190.4133 77.5935,-190.4132"/>
 </g>
 <!-- train -->
 <g id="node3" class="node">
 <title>train</title>
-<ellipse fill="none" stroke="#000000" cx="47.0934" cy="-90" rx="27" ry="18"/>
-<text text-anchor="middle" x="47.0934" y="-86.3" font-family="Times,serif" font-size="14.00" fill="#000000">train</text>
+<ellipse fill="none" stroke="white" cx="47.0934" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="47.0934" y="-86.3" font-family="Times,serif" font-size="14.00" fill="white">train</text>
 </g>
 <!-- evaluate -->
 <g id="node5" class="node">
 <title>evaluate</title>
-<ellipse fill="none" stroke="#000000" cx="74.0934" cy="-18" rx="40.0939" ry="18"/>
-<text text-anchor="middle" x="74.0934" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">evaluate</text>
+<ellipse fill="none" stroke="white" cx="74.0934" cy="-18" rx="40.0939" ry="18"/>
+<text text-anchor="middle" x="74.0934" y="-14.3" font-family="Times,serif" font-size="14.00" fill="white">evaluate</text>
 </g>
 <!-- train&#45;&gt;evaluate -->
 <g id="edge5" class="edge">
 <title>train-&gt;evaluate</title>
-<path fill="none" stroke="#000000" d="M53.7676,-72.2022C56.8181,-64.0675 60.4996,-54.2501 63.8866,-45.2181"/>
-<polygon fill="#000000" stroke="#000000" points="67.1683,-46.4348 67.4025,-35.8425 60.614,-43.9769 67.1683,-46.4348"/>
+<path fill="none" stroke="white" d="M53.7676,-72.2022C56.8181,-64.0675 60.4996,-54.2501 63.8866,-45.2181"/>
+<polygon fill="white" stroke="white" points="67.1683,-46.4348 67.4025,-35.8425 60.614,-43.9769 67.1683,-46.4348"/>
 </g>
 <!-- featurize&#45;&gt;train -->
 <g id="edge3" class="edge">
 <title>featurize-&gt;train</title>
-<path fill="none" stroke="#000000" d="M67.4193,-144.2022C64.3458,-136.0064 60.6318,-126.1024 57.2239,-117.0145"/>
-<polygon fill="#000000" stroke="#000000" points="60.4793,-115.7274 53.6908,-107.593 53.925,-118.1853 60.4793,-115.7274"/>
+<path fill="none" stroke="white" d="M67.4193,-144.2022C64.3458,-136.0064 60.6318,-126.1024 57.2239,-117.0145"/>
+<polygon fill="white" stroke="white" points="60.4793,-115.7274 53.6908,-107.593 53.925,-118.1853 60.4793,-115.7274"/>
 </g>
 <!-- featurize&#45;&gt;evaluate -->
 <g id="edge4" class="edge">
 <title>featurize-&gt;evaluate</title>
-<path fill="none" stroke="#000000" d="M77.9347,-143.6001C79.91,-133.2025 82.1057,-119.9346 83.0934,-108 84.4131,-92.0545 84.4131,-87.9455 83.0934,-72 82.3989,-63.6085 81.1072,-54.5578 79.7149,-46.3092"/>
-<polygon fill="#000000" stroke="#000000" points="83.1478,-45.6235 77.9347,-36.3999 76.2581,-46.8612 83.1478,-45.6235"/>
+<path fill="none" stroke="white" d="M77.9347,-143.6001C79.91,-133.2025 82.1057,-119.9346 83.0934,-108 84.4131,-92.0545 84.4131,-87.9455 83.0934,-72 82.3989,-63.6085 81.1072,-54.5578 79.7149,-46.3092"/>
+<polygon fill="white" stroke="white" points="83.1478,-45.6235 77.9347,-36.3999 76.2581,-46.8612 83.1478,-45.6235"/>
 </g>
 </g>
 </svg>
