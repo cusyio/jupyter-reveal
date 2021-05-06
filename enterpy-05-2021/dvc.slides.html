@@ -190,7 +190,7 @@ $ dvc add data/data.xml
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
 <li>Dies fügt die Datei <code>data/data.xml</code> in <code>data/.gitignore</code> hinzu</li>
-<li>Die Metanangaben werden in <code>data/data.xml.dvc</code>.</li>
+<li>Die Meta-Angaben werden in <code>data/data.xml.dvc</code> geschrieben.</li>
 </ol>
 <p>Weitere Informationen zum Dateiformat der <code>*.dvc</code>-Datei erhaltet ihr unter <a href="https://dvc.org/doc/user-guide/dvc-file-format">DVC-File Format</a>.</p>
 
@@ -303,7 +303,7 @@ Stage <span class="s1">&#39;data.xml.dvc&#39;</span> didn<span class="s1">&#39;t
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Pipelines">Pipelines<a class="anchor-link" href="#Pipelines">&#182;</a></h2><p><code>dvc run</code> erstellt Verbeitungsstufen.</p>
+<h2 id="Pipelines">Pipelines<a class="anchor-link" href="#Pipelines">&#182;</a></h2><p><code>dvc run</code> erstellt Verarbeitungsstufen.</p>
 <p>Jede Stufe ist gekennzeichnet durch</p>
 <ul>
 <li>eine, mit Git verwaltete, Quellcode-Datei</li>
@@ -470,7 +470,7 @@ $ dvc push
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Damit diese Phase wiederholt werden kann, werden die hd5-Hashwerte und Parameterwerte in der <code>dvc.lock</code>-Datei gespeichert:</p>
+<p>Damit diese Phase wiederholt werden kann, werden die MD5-Hashwerte und Parameterwerte in der <code>dvc.lock</code>-Datei gespeichert:</p>
 <div class="highlight"><pre><span></span><span class="nt">featurize</span><span class="p">:</span>
   <span class="nt">cmd</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python src/featurization.py data/splitted data/features</span>
   <span class="nt">deps</span><span class="p">:</span>
