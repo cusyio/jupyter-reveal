@@ -1,12 +1,77 @@
-Quick start
-===========
+Jupyter reveal
+==============
 
-|License| |Pyup|
+Presentation slides for `Jupyter notebooks <https://jupyter.org/>`_.
 
+|Contributors| |License| |Pyup|
+
+.. |Contributors| image:: https://img.shields.io/github/contributors/cusyio/jupyter-reveal.svg
+   :target: https://github.com/cusyio/jupyter-reveal/graphs/contributors
 .. |License| image:: https://img.shields.io/github/license/cusyio/jupyter-reveal.svg
    :target: https://github.com/cusyio/jupyter-reveal/blob/main/LICENSE
 .. |Pyup| image:: https://pyup.io/repos/github/cusyio/jupyter-reveal/shield.svg
    :target: https://pyup.io/repos/github/cusyio/jupyter-reveal/
+
+Motivation
+----------
+
+We spent too much time designing our presentation slides using PowerPoint or
+Keynote. Then we needed additional tools for syntax highlighting. Since we were
+already working a lot with Jupyter notebooks, it was obvious to use them to
+create the slides as well.
+
+Features
+--------
+
+Write Markdown
+    In Jupyter notebooks we can use `Markdown Cells
+    <https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Working%20With%20Markdown%20Cells.html>`_.
+Built-in syntax highlighting
+    You get the appropriate syntax highlighting, e.g. for Python with
+
+    .. code-block:: md
+
+        ```python
+        s = "Syntax Highlighting for Python"
+        print(s)
+        ```
+
+Support for mathematical operators and symbols
+    Mathematical operators and symbols are supported with `MathJax
+    <https://www.mathjax.org/>`_. You can use them in Markdown and code cells.
+    So, e.g. ``$\sqrt{k}$`` becomes |mathematical operators and symbols| and
+
+    .. |mathematical operators and symbols| image:: img/markdown.png
+
+    .. code-block:: python
+
+        from IPython.display import Math
+        Math(r'F(k) = \int_{-\infty}^{\infty} f(x) e^{2\pi i k} dx')
+
+    becomes
+
+    .. image:: img/math.png
+
+    However, you can also use other latex modes, e.g. ``eqnarray`` in
+
+    .. code-block:: python
+
+        from IPython.display import Latex
+        Latex(r"""\begin{eqnarray}
+        \nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
+        \end{eqnarray}""")
+
+    becomes
+
+    .. image:: img/latex.png
+
+Themable
+    You can use the `reveal themes <https://revealjs.com/themes/>`_ or `create
+    your own
+    <https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md#creating-a-theme>`_.
+
+PDF export
+    The slides can be easily converted to PDFs.
 
 Installation
 ------------
