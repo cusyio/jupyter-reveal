@@ -8,7 +8,7 @@ cffi==1.14.5
 decorator==5.0.7
 defusedxml==0.7.1
 entrypoints==0.3
-ipykernel==5.5.3
+ipykernel==5.5.4
 ipython==7.23.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
