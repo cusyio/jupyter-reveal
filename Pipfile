@@ -10,8 +10,5 @@ jupyter = "*"
 jupyter-contrib-nbextensions = "*"
 nbconvert = "*"
 
-[requires]
-python_version = "3.9"
-
 [pipenv]
 allow_prereleases = true
