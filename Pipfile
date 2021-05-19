@@ -9,7 +9,6 @@ verify_ssl = true
 jupyter = "*"
 jupyter-contrib-nbextensions = "*"
 nbconvert = "*"
-tornado = "<6.0"
 
 [requires]
 python_version = "3.9"
