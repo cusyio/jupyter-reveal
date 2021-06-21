@@ -12514,7 +12514,7 @@ THE SOFTWARE.
   border-spacing: 0;
   border: none;
   color: var(--jp-ui-font-color1);
-  font-size: 12px;
+  font-size: 20px;
   table-layout: fixed;
   margin-left: auto;
   margin-right: auto;
@@ -12549,10 +12549,11 @@ THE SOFTWARE.
 
 .jp-RenderedHTMLCommon th {
   font-weight: bold;
+  background: var(--jp-layout-color1);
 }
 
 .jp-RenderedHTMLCommon tbody tr:nth-child(odd) {
-  background: var(--jp-layout-color0);
+  background: var(--jp-layout-color1);
 }
 
 .jp-RenderedHTMLCommon tbody tr:nth-child(even) {
