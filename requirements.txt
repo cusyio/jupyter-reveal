@@ -3,12 +3,12 @@ argon2-cffi==20.1.0
 async-generator==1.10
 attrs==21.2.0
 backcall==0.2.0
-bleach==3.3.0
-cffi==1.14.5
+bleach==3.3.1
+cffi==1.14.6
 decorator==5.0.9
 defusedxml==0.7.1
 entrypoints==0.3
-ipykernel==6.0.1
+ipykernel==6.0.2
 ipython==7.25.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
@@ -46,7 +46,7 @@ pycparser==2.20
 Pygments==2.9.0
 pyparsing==2.4.7
 pyrsistent==0.18.0
-python-dateutil==2.8.1
+python-dateutil==2.8.2
 PyYAML==5.4.1
 pyzmq==22.1.0
 qtconsole==5.1.1
