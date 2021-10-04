@@ -16,7 +16,7 @@ jedi==0.18.0
 Jinja2==3.0.1
 jsonschema==4.0.1
 jupyter==1.0.0
-jupyter-client==6.2.0
+jupyter-client==7.0.5
 jupyter-console==6.4.0
 jupyter-contrib-core==0.3.3
 jupyter-contrib-nbextensions==0.5.1
