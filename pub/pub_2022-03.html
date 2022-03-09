@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>What’s new in Python – March 2022</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
+<link rel="stylesheet" href="../dist/theme/cusy.css" id="theme">
+<link rel="stylesheet" href="../dist/theme/jupyter.css">
+
+</head>
+
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+
+<div class="reveal">
+<div class="slides"><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="What%E2%80%99s-new-in-Python">What&#8217;s new in Python<a class="anchor-link" href="#What%E2%80%99s-new-in-Python">&#182;</a></h1><p><img src="../img/veit-duotone.png" alt="Portrait Veit Schiele" style="float: left; width:256px; margin-right:32px; border-radius: 50%;"/></p>
+<p>Veit Schiele<br>Cusy GmbH, Berlin<br>Python Users Berlin, 10 March 2022</p>
+<p><p style="clear: both; margin-bottom: 0;">
+    <br>
+    <a href="https://github.com/cusyio/jupyter-reveal/tree/main/pub/pub_2022-03.pdf">github.com/cusyio/jupyter-reveal/pub/pub_2022-03.pdf</a></p>
+<p/>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><p>On Monday, 7 March, Python 3.11 a6 was released</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Release-schedule">Release schedule<a class="anchor-link" href="#Release-schedule">&#182;</a></h3><p>Final release of Python 3.11 is planned for October 2022,</p>
+<p>see <a href="https://www.python.org/dev/peps/pep-0664/">PEP 664 – Python 3.11 Release Schedule</a></p>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><p>see <a href="https://www.python.org/downloads/release/python-3110a6/">Python 3.11.0a6 release notes</a></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks"><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657 &#8211; Include Fine Grained Error Locations in Tracebacks</a><a class="anchor-link" href="#PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks">&#182;</a></h4><p>The traceback contains visual feedback about the exact location in a line that threw an exception, for example</p>
+<div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;test.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="s1">&#39;b&#39;</span><span class="p">][</span><span class="s1">&#39;c&#39;</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="o">~~~~~~~~~~~^^^^^</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;NoneType&#39;</span> <span class="nb">object</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">subscriptable</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks"><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657 &#8211; Include Fine Grained Error Locations in Tracebacks</a><a class="anchor-link" href="#PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks">&#182;</a></h4><p>Opt-out mechanism</p>
+<p>… to save memory and still allow tools to automatically analyse tracebacks:</p>
+<ul>
+<li>Environment variable: <code>PYTHONNODEBUGRANGES</code></li>
+<li>Command line option: <code>python -Xno_debug_ranges</code></li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><p>There will be a new exception type called <em>exception group</em>, which will allow multiple exceptions to be grouped into one container. This essentially simplifies error handling in concurrent code, especially with Async IO, but also, for example, when grouping multiple exceptions that occur during data validation.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="ExceptionGroup-and-BaseExceptionGroup">ExceptionGroup and BaseExceptionGroup<a class="anchor-link" href="#ExceptionGroup-and-BaseExceptionGroup">&#182;</a></h5><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">eg</span> <span class="o">=</span> <span class="n">ExceptionGroup</span><span class="p">(</span>
+<span class="o">...</span>     <span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="o">...</span>     <span class="p">[</span>
+<span class="o">...</span>         <span class="ne">TypeError</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="o">...</span>         <span class="n">ExceptionGroup</span><span class="p">(</span>
+<span class="o">...</span>             <span class="s2">&quot;two&quot;</span><span class="p">,</span>
+<span class="o">...</span>              <span class="p">[</span><span class="ne">TypeError</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="ne">ValueError</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+<span class="o">...</span>         <span class="p">),</span>
+<span class="o">...</span>         <span class="n">ExceptionGroup</span><span class="p">(</span>
+<span class="o">...</span>              <span class="s2">&quot;three&quot;</span><span class="p">,</span>
+<span class="o">...</span>               <span class="p">[</span><span class="ne">OSError</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+<span class="o">...</span>         <span class="p">)</span>
+<span class="o">...</span>     <span class="p">]</span>
+<span class="o">...</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="ExceptionGroup-and-BaseExceptionGroup">ExceptionGroup and BaseExceptionGroup<a class="anchor-link" href="#ExceptionGroup-and-BaseExceptionGroup">&#182;</a></h5><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">traceback</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">traceback</span><span class="o">.</span><span class="n">print_exception</span><span class="p">(</span><span class="n">eg</span><span class="p">)</span>
+  <span class="o">|</span> <span class="n">ExceptionGroup</span><span class="p">:</span> <span class="n">one</span> <span class="p">(</span><span class="mi">3</span> <span class="n">sub</span><span class="o">-</span><span class="n">exceptions</span><span class="p">)</span>
+  <span class="o">+-+----------------</span> <span class="mi">1</span> <span class="o">----------------</span>
+    <span class="o">|</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="o">+----------------</span> <span class="mi">2</span> <span class="o">----------------</span>
+    <span class="o">|</span> <span class="n">ExceptionGroup</span><span class="p">:</span> <span class="n">two</span> <span class="p">(</span><span class="mi">2</span> <span class="n">sub</span><span class="o">-</span><span class="n">exceptions</span><span class="p">)</span>
+    <span class="o">+-+----------------</span> <span class="mi">1</span> <span class="o">----------------</span>
+      <span class="o">|</span> <span class="ne">TypeError</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="o">+----------------</span> <span class="mi">2</span> <span class="o">----------------</span>
+      <span class="o">|</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="o">+------------------------------------</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="except*">except*<a class="anchor-link" href="#except*">&#182;</a></h5><p>This introduces a new variant of the try except syntax to simplify working with exception groups.</p>
+<p><code>*</code> indicates that multiple exceptions can be handled by each <code>except*</code> clause:</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">except</span><span class="o">*</span> <span class="n">SpamError</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">except</span><span class="o">*</span> <span class="n">FooError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">except</span><span class="o">*</span> <span class="p">(</span><span class="n">BarError</span><span class="p">,</span> <span class="n">BazError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-673-%E2%80%93-Self-Type"><a href="https://www.python.org/dev/peps/pep-0673/">PEP 673 &#8211; Self Type</a><a class="anchor-link" href="#PEP-673-%E2%80%93-Self-Type">&#182;</a></h4><p>PEP 673 wants to introduce a simpler and more intuitive way to annotate methods that return an instance of their class. This corresponds to the TypeVar-based approach in <a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 – Type Hints</a>.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Reference implementation: <a href="https://github.com/microsoft/pyright">PyRight</a></p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>See also:</strong></p>
+<p>Mypy thread from 2016 talking about ways to tackle the self-typing problem <a href="https://github.com/python/mypy/issues/1212">SelfType or another way to spell "type of self" (or, How to define a copy() function)</a>.</p>
+</blockquote>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python3.11.0a6-released">Python3.11.0a6 released<a class="anchor-link" href="#Python3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-646-%E2%80%93-Variadic-Generics"><a href="https://www.python.org/dev/peps/pep-0646/">PEP 646 &#8211; Variadic Generics</a><a class="anchor-link" href="#PEP-646-%E2%80%93-Variadic-Generics">&#182;</a></h4><p>Variadic generics in the form of <code>TypeVarTuple</code> want to solve a very special use case in scientific libraries like NumPy and simplify the handling of multidimensional arrays. Thus, the shape of an array is to be defined by parameterising its type with a variable number of placeholder types.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-680-%E2%80%93-tomllib:-Support-for-Parsing-TOML-in-the-Standard-Library"><a href="https://www.python.org/dev/peps/pep-0680/">PEP 680 &#8211; tomllib: Support for Parsing TOML in the Standard Library</a><a class="anchor-link" href="#PEP-680-%E2%80%93-tomllib:-Support-for-Parsing-TOML-in-the-Standard-Library">&#182;</a></h4><p>The Steering Committee recently adopted PEP 680, which justifies the need for a TOML parser in the Python standard library, as <a href="https://www.python.org/dev/peps/pep-0517/">PEP 517 – A build-system independent format for source trees</a> leads to a new build system based on <code>pyproject.toml</code>. Previously, packaging tools had to bundle a library to read project metadata from that file.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>Note:</strong></p>
+<p>The current plan only provides for a TOML parser, without the corresponding serialiser. To write TOML data, an external library must still be installed and imported.</p>
+</blockquote>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="Performance-optimisations">Performance optimisations<a class="anchor-link" href="#Performance-optimisations">&#182;</a></h3><p>According to Anthony Shaw from the <a href="https://github.com/faster-cpython">Faster Cpython Project</a>, CPython 3.11 is up to 45% faster at creating instances of base classes and calling methods (most Python code!) 🥳</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-Issues-Moving-to-GitHub">Python Issues Moving to GitHub<a class="anchor-link" href="#Python-Issues-Moving-to-GitHub">&#182;</a></h2><p>If you have found a bug in Python 3.11.0 a6, you can currently report it to the <a href="https://roundup.sourceforge.io/">Roundup</a>-based <a href="https://bugs.python.org/">Python Bug Tracker (BPO)</a>. From 24 March, however, the move to GitHub Issues will begin.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>See also:</strong></p>
+<ul>
+<li><a href="https://discuss.python.org/t/github-issues-migration-is-coming-soon/">Github Issues Migration is coming soon</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0581/">PEP 581 – Using GitHub Issues for CPython</a></li>
+</ul>
+</blockquote>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PyCon-US-2022-schedule-announced">PyCon US 2022 schedule announced<a class="anchor-link" href="#PyCon-US-2022-schedule-announced">&#182;</a></h2><ul>
+<li>After two years in which PyCon US was held virtually due to the pandemic, PyCon US 2022 seems to be able to take place in person again.</li>
+<li>This time the conference will be held in Salt Lake City, Utah.</li>
+<li>At the same time, there will be an online streaming option.</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PyCon-US-2022-schedule-announced">PyCon US 2022 schedule announced<a class="anchor-link" href="#PyCon-US-2022-schedule-announced">&#182;</a></h2><h3 id="Tutorials,-Summits-etc.">Tutorials, Summits etc.<a class="anchor-link" href="#Tutorials,-Summits-etc.">&#182;</a></h3><table>
+<thead><tr>
+<th style="text-align:left">Dates</th>
+<th style="text-align:left">Events</th>
+<th style="text-align:left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">27-28 April</td>
+<td style="text-align:left"><a href="https://us.pycon.org/2022/schedule/tutorials/">Tutorials</a></td>
+<td style="text-align:left">150 USD per session; there are two timeslots per day</td>
+</tr>
+<tr>
+<td style="text-align:left">28 April</td>
+<td style="text-align:left"><a href="https://us.pycon.org/2022/schedule/sponsor-workshops/">Sponsor Workshops</a></td>
+<td style="text-align:left">No entry fee</td>
+</tr>
+<tr>
+<td style="text-align:left">28 April</td>
+<td style="text-align:left"><a href="https://us.pycon.org/2022/events/education-summit/">Education Summit</a></td>
+<td style="text-align:left">No entry fee</td>
+</tr>
+<tr>
+<td style="text-align:left">29 April</td>
+<td style="text-align:left"><a href="https://us.pycon.org/2022/events/maintainers-summit/">Maintainers Summit</a></td>
+<td style="text-align:left">No entry fee</td>
+</tr>
+<tr>
+<td style="text-align:left">30 April</td>
+<td style="text-align:left"><a href="https://us.pycon.org/2022/events/mentored-sprints/">Mentored Sprints for Diverse Beginners</a></td>
+<td style="text-align:left">No entry fee</td>
+</tr>
+<tr>
+<td style="text-align:left">30 April</td>
+<td style="text-align:left"><a href="https://us.pycon.org/2022/events/pyladies-auction/">PyLadies Auction</a></td>
+<td style="text-align:left">35 or 50 USD Entry; supporter rates are offered</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>See also:</strong></p>
+<ul>
+<li><a href="https://us.pycon.org/2022/events/pyladies-auction/">Conference Schedule</a></li>
+<li><a href="https://us.pycon.org/2022/attend/information/">Registration</a></li>
+</ul>
+</blockquote>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="GeoPython-2022">GeoPython 2022<a class="anchor-link" href="#GeoPython-2022">&#182;</a></h2><p>Due to an overlap with a major event in Basel, <a href="https://2022.geopython.net/">GeoPython 2022</a> had to be postponed to 20–22 June 2022.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Other important dates are:</p>
+<ul>
+<li>Submission deadline workshops: 15 March 2022 (12:00 AoE)</li>
+<li>Registration deadline: 15 March 2022</li>
+<li>Timetable for the first draft: 20 March 2022</li>
+</ul>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PSF-hires-to-improve-PyPI">PSF hires to improve PyPI<a class="anchor-link" href="#PSF-hires-to-improve-PyPI">&#182;</a></h2><p>The Python Software Foundation (PSF) is looking to hire two developers to develop new features in the Python Package Index (PyPI). This decision was made after some surveys in the Python community identified the main user requirements that are currently missing in PyPI: the most requested feature was organisational accounts in PyPI. This is to become a paid service offered to companies.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>One of the contractors will focus on the back-end while the other will take care of the front-end. Both roles will be location independent and contract work is expected to start in early April 2022. The budget for each role is up to $98k for approximately 560 hours, with 35 hours per working week.</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote><p><strong>See also:</strong></p>
+<ul>
+<li><a href="https://pyfound.blogspot.com/2022/03/we-are-hiring-to-expand-our.html">We are hiring to expand our Infrastructure staff!</a></li>
+<li><a href="https://github.com/psf/request-for/blob/main/2022-PyPI/RFP.md#evaluation-criteria">Evaluation criteria</a></li>
+</ul>
+</blockquote>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="pythoncapi_compat-is-now-a-project-of-the-GitHub-Python-Organisation"><code>pythoncapi_compat</code> is now a project of the GitHub Python Organisation<a class="anchor-link" href="#pythoncapi_compat-is-now-a-project-of-the-GitHub-Python-Organisation">&#182;</a></h2><p><a href="https://github.com/python/pythoncapi_compat">pythoncapi_compat</a> is used to write a C extension for different Python versions with a single code base.</p>
+
+</div>
+</div></section></section>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+<script>
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://unpkg.com/reveal.js@4.0.2/dist/reveal.js",
+      "https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"
+    ],
+
+    function(Reveal, RevealNotes){
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            transition: "slide",
+            plugins: [RevealNotes]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+    }
+);
+</script>
+
+</html>
