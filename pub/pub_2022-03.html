@@ -45,13 +45,13 @@
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><p>see <a href="https://www.python.org/downloads/release/python-3110a6/">Python 3.11.0a6 release notes</a></p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><p>see <a href="https://peps.python.org/pep-0664/">Python 3.11.0a6 release notes</a></p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks"><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657 &#8211; Include Fine Grained Error Locations in Tracebacks</a><a class="anchor-link" href="#PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks">&#182;</a></h4><p>The traceback contains visual feedback about the exact location in a line that threw an exception, for example</p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks"><a href="https://peps.python.org/pep-0657/">PEP 657 &#8211; Include Fine Grained Error Locations in Tracebacks</a><a class="anchor-link" href="#PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks">&#182;</a></h4><p>The traceback contains visual feedback about the exact location in a line that threw an exception, for example</p>
 <div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;test.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
     <span class="n">x</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">][</span><span class="s1">&#39;b&#39;</span><span class="p">][</span><span class="s1">&#39;c&#39;</span><span class="p">][</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -63,7 +63,7 @@
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks"><a href="https://www.python.org/dev/peps/pep-0657/">PEP 657 &#8211; Include Fine Grained Error Locations in Tracebacks</a><a class="anchor-link" href="#PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks">&#182;</a></h4><p>Opt-out mechanism</p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks"><a href="https://peps.python.org/pep-0657/">PEP 657 &#8211; Include Fine Grained Error Locations in Tracebacks</a><a class="anchor-link" href="#PEP-657-%E2%80%93-Include-Fine-Grained-Error-Locations-in-Tracebacks">&#182;</a></h4><p>Opt-out mechanism</p>
 <p>… to save memory and still allow tools to automatically analyse tracebacks:</p>
 <ul>
 <li>Environment variable: <code>PYTHONNODEBUGRANGES</code></li>
@@ -74,13 +74,13 @@
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><p>There will be a new exception type called <em>exception group</em>, which will allow multiple exceptions to be grouped into one container. This essentially simplifies error handling in concurrent code, especially with Async IO, but also, for example, when grouping multiple exceptions that occur during data validation.</p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://peps.python.org/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><p>There will be a new exception type called <em>exception group</em>, which will allow multiple exceptions to be grouped into one container. This essentially simplifies error handling in concurrent code, especially with Async IO, but also, for example, when grouping multiple exceptions that occur during data validation.</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="ExceptionGroup-and-BaseExceptionGroup">ExceptionGroup and BaseExceptionGroup<a class="anchor-link" href="#ExceptionGroup-and-BaseExceptionGroup">&#182;</a></h5><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">eg</span> <span class="o">=</span> <span class="n">ExceptionGroup</span><span class="p">(</span>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://peps.python.org/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="ExceptionGroup-and-BaseExceptionGroup">ExceptionGroup and BaseExceptionGroup<a class="anchor-link" href="#ExceptionGroup-and-BaseExceptionGroup">&#182;</a></h5><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">eg</span> <span class="o">=</span> <span class="n">ExceptionGroup</span><span class="p">(</span>
 <span class="o">...</span>     <span class="s2">&quot;one&quot;</span><span class="p">,</span>
 <span class="o">...</span>     <span class="p">[</span>
 <span class="o">...</span>         <span class="ne">TypeError</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
@@ -118,7 +118,7 @@
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://www.python.org/dev/peps/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="except*">except*<a class="anchor-link" href="#except*">&#182;</a></h5><p>This introduces a new variant of the try except syntax to simplify working with exception groups.</p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://peps.python.org/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><h5 id="except*">except*<a class="anchor-link" href="#except*">&#182;</a></h5><p>This introduces a new variant of the try except syntax to simplify working with exception groups.</p>
 <p><code>*</code> indicates that multiple exceptions can be handled by each <code>except*</code> clause:</p>
 
 </div>
@@ -139,7 +139,15 @@
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-673-%E2%80%93-Self-Type"><a href="https://www.python.org/dev/peps/pep-0673/">PEP 673 &#8211; Self Type</a><a class="anchor-link" href="#PEP-673-%E2%80%93-Self-Type">&#182;</a></h4><p>PEP 673 wants to introduce a simpler and more intuitive way to annotate methods that return an instance of their class. This corresponds to the TypeVar-based approach in <a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 – Type Hints</a>.</p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-654-%E2%80%93-Exception-Groups-and-except*"><a href="https://peps.python.org/pep-0654/">PEP 654 &#8211; Exception Groups and except*</a><a class="anchor-link" href="#PEP-654-%E2%80%93-Exception-Groups-and-except*">&#182;</a></h4><blockquote><p><strong>See also:</strong></p>
+<p><a href="https://pythonbytes.fm/episodes/show/271/cpython-async-task-groups-in-python-3.11">PythonBytes: Episode #271: CPython: Async Task Groups in Python 3.11</a></p>
+</blockquote>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-673-%E2%80%93-Self-Type"><a href="https://peps.python.org/pep-0673/">PEP 673 &#8211; Self Type</a><a class="anchor-link" href="#PEP-673-%E2%80%93-Self-Type">&#182;</a></h4><p>PEP 673 wants to introduce a simpler and more intuitive way to annotate methods that return an instance of their class. This corresponds to the TypeVar-based approach in <a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 – Type Hints</a>.</p>
 
 </div>
 </div><div class="fragment">
@@ -165,7 +173,7 @@
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-680-%E2%80%93-tomllib:-Support-for-Parsing-TOML-in-the-Standard-Library"><a href="https://www.python.org/dev/peps/pep-0680/">PEP 680 &#8211; tomllib: Support for Parsing TOML in the Standard Library</a><a class="anchor-link" href="#PEP-680-%E2%80%93-tomllib:-Support-for-Parsing-TOML-in-the-Standard-Library">&#182;</a></h4><p>The Steering Committee recently adopted PEP 680, which justifies the need for a TOML parser in the Python standard library, as <a href="https://www.python.org/dev/peps/pep-0517/">PEP 517 – A build-system independent format for source trees</a> leads to a new build system based on <code>pyproject.toml</code>. Previously, packaging tools had to bundle a library to read project metadata from that file.</p>
+<h2 id="Python-3.11.0a6-released">Python 3.11.0a6 released<a class="anchor-link" href="#Python-3.11.0a6-released">&#182;</a></h2><h3 id="New-features">New features<a class="anchor-link" href="#New-features">&#182;</a></h3><h4 id="PEP-680-%E2%80%93-tomllib:-Support-for-Parsing-TOML-in-the-Standard-Library"><a href="https://peps.python.org/pep-0680/">PEP 680 &#8211; tomllib: Support for Parsing TOML in the Standard Library</a><a class="anchor-link" href="#PEP-680-%E2%80%93-tomllib:-Support-for-Parsing-TOML-in-the-Standard-Library">&#182;</a></h4><p>The Steering Committee recently adopted PEP 680, which justifies the need for a TOML parser in the Python standard library, as <a href="https://peps.python.org/pep-0517/">PEP 517 – A build-system independent format for source trees</a> leads to a new build system based on <code>pyproject.toml</code>. Previously, packaging tools had to bundle a library to read project metadata from that file.</p>
 
 </div>
 </div><div class="fragment">
@@ -194,9 +202,23 @@
 <blockquote><p><strong>See also:</strong></p>
 <ul>
 <li><a href="https://discuss.python.org/t/github-issues-migration-is-coming-soon/">Github Issues Migration is coming soon</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-0581/">PEP 581 – Using GitHub Issues for CPython</a></li>
+<li><a href="https://peps.python.org/pep-0581/">PEP 581 – Using GitHub Issues for CPython</a></li>
 </ul>
 </blockquote>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PEPs-have-a-new-home:-peps.python.org">PEPs have a new home: <a href="https://peps.python.org/">peps.python.org</a><a class="anchor-link" href="#PEPs-have-a-new-home:-peps.python.org">&#182;</a></h2>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><a href="https://discuss.python.org/t/request-for-comment-making-pep-rendering-self-contained/10774">Request for comment: Making PEP rendering self-contained</a></li>
+<li>The known URLs <a href="http://python.org/dev/peps/…">http://python.org/dev/peps/…</a> are redirected</li>
+</ul>
 
 </div>
 </div></div></section></section><section><section>
