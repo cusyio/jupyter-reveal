@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>What’s new in Python – April 2022</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
+<link rel="stylesheet" href="../dist/theme/cusy.css" id="theme">
+<link rel="stylesheet" href="../dist/theme/jupyter.css">
+
+</head>
+
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+
+<div class="reveal">
+<div class="slides"><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="What%E2%80%99s-new-in-Python">What&#8217;s new in Python<a class="anchor-link" href="#What%E2%80%99s-new-in-Python">&#182;</a></h1><p><img src="../img/veit-duotone.png" alt="Portrait Veit Schiele" style="float: left; width:256px; margin-right:32px; border-radius: 50%;"/></p>
+<p>Veit Schiele<br>Cusy GmbH, Berlin<br>Python Users Berlin, 14 April 2022</p>
+<p><p style="clear: both; margin-bottom: 0;">
+    <br>
+    <a href="https://github.com/cusyio/jupyter-reveal/tree/main/pub/pub_2022-03.pdf">github.com/cusyio/jupyter-reveal/pub/pub_2022-04.pdf</a></p>
+<p/>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-3.10.4-and-3.9.12-are-available-out-of-schedule">Python 3.10.4 and 3.9.12 are available out of schedule<a class="anchor-link" href="#Python-3.10.4-and-3.9.12-are-available-out-of-schedule">&#182;</a></h2><p>Shortly after the release of 3.10.3 and 3.9.11, a regression was found which meant that Python could no longer be built on Red Hat Enterprise Linux 6. Our new versions fix this problem.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <b>See also:</b><br>
+    <ul>
+        <li><a href="https://discuss.python.org/t/python-3-10-4-and-3-9-12-are-now-available-out-of-schedule/14568">Python 3.10.4 and 3.9.12 are now available out of schedule</a></li>
+    </ul>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PEP-685-%E2%80%93-Comparison-of-extra-names-for-optional-distribution-dependencies">PEP 685 &#8211; Comparison of extra names for optional distribution dependencies<a class="anchor-link" href="#PEP-685-%E2%80%93-Comparison-of-extra-names-for-optional-distribution-dependencies">&#182;</a></h2>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Extras of a package should be standardised to avoid ambiguity</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+<b>See also:</b><br>
+    <ul>
+        <li><a href="https://peps.python.org/pep-0685/">PEP 685 – Comparison of extra names for optional distribution dependencies</a></li>
+    </ul>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PEP-594-%E2%80%93-Removing-dead-batteries-from-the-standard-library">PEP 594 &#8211; Removing dead batteries from the standard library<a class="anchor-link" href="#PEP-594-%E2%80%93-Removing-dead-batteries-from-the-standard-library">&#182;</a></h2><p>This PEP proposes a list of modules that should be removed from the standard library.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The modules are mostly historical data formats, for example</p>
+<ul>
+<li><p>Commodore and SUN file formats</p>
+<ul>
+<li>The <a href="https://peps.python.org/pep-0594/#chunk">chunk</a> module provides support for reading and writing Electronic Arts' Interchange File Format an old audio file format originally introduced for Commodore and Amiga.</li>
+<li>The <a href="https://docs.python.org/3/library/xdrlib.html">xdrlib</a> module supports the Sun External Data Representation Standard XDR, an old binary serialisation format from 1987.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PEP-594-%E2%80%93-Removing-dead-batteries-from-the-standard-library">PEP 594 &#8211; Removing dead batteries from the standard library<a class="anchor-link" href="#PEP-594-%E2%80%93-Removing-dead-batteries-from-the-standard-library">&#182;</a></h2><p>This PEP proposes a list of modules that should be removed from the standard library.</p>
+<ul>
+<li><p>APIs and operating systems that have long been deprecated, e.g.</p>
+<ul>
+<li>The <a href="https://docs.python.org/3/library/nis.html">nis</a> module provides support for Network Information Service/Yellow Pages, an obsolete directory service protocol that never caught on against libc's Name Service Switch, LDAP and Kerberos/GSSAPI.</li>
+<li>The <a href="https://docs.python.org/3/library/spwd.html">spwd</a> module, which provides direct access to the Unix shadow password database using non-standard APIs.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="PEP-594-%E2%80%93-Removing-dead-batteries-from-the-standard-library">PEP 594 &#8211; Removing dead batteries from the standard library<a class="anchor-link" href="#PEP-594-%E2%80%93-Removing-dead-batteries-from-the-standard-library">&#182;</a></h2><p>This PEP proposes a list of modules that should be removed from the standard library.</p>
+<ul>
+<li><p>Modules that have security implications and better alternatives, e.g.</p>
+<ul>
+<li>the <a href="https://docs.python.org/3/library/crypt.html">crypt</a> module implements password hashing based on the crypt(3) function from libcrypt or libxcrypt on Unix-like platforms. The algorithms are mostly old, of poor quality and insecure. Alternatives are <a href="https://pypi.org/project/legacycrypt/">legacycrypt</a>, <a href="https://pypi.org/project/bcrypt/">bcrypt</a>, <a href="https://pypi.org/project/argon2-cffi/">argon2-cffi</a>, <a href="https://docs.python.org/3/library/hashlib.html">hashlib</a> and <a href="https://pypi.org/project/passlib/">passlib</a>.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-Performance">Python Performance<a class="anchor-link" href="#Python-Performance">&#182;</a></h2>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Pyston-just-added-ARM-support">Pyston just added ARM support<a class="anchor-link" href="#Pyston-just-added-ARM-support">&#182;</a></h3><p>The main feature of this version is 64-bit ARM support, which makes Pyston available on</p>
+<ul>
+<li>ARM servers</li>
+<li>M1 Macs via Docker</li>
+<li>Raspberry Pis with a 64-bit operating system</li>
+<li>and other 64-bit ARM systems</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <b>See also:</b><br>
+    <ul>
+        <li>
+            <a href="https://blog.pyston.org/2022/04/01/pyston-v2-3-3-arm-support/">Pyston v2.3.3: ARM support</a>
+        </li>
+    </ul>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-Performance">Python Performance<a class="anchor-link" href="#Python-Performance">&#182;</a></h2><h3 id="Sciagraph">Sciagraph<a class="anchor-link" href="#Sciagraph">&#182;</a></h3><ul>
+<li>New profiler for Python batch jobs that creates performance and memory profiles in production to achieve the most realistic results possible</li>
+</ul>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Proprietary licence</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <b>See also:</b><br>
+    <ul>
+        <li>
+            <a href="https://pythonspeed.com/sciagraph/">Speed up production Python data-processing jobs with always-on profiling</a>
+        </li>
+        <li>
+            <a href="https://pythonspeed.com/sciagraph/docs/">Docs</a>
+        </li>
+    </ul>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-Performance">Python Performance<a class="anchor-link" href="#Python-Performance">&#182;</a></h2><h3 id="perflint">perflint<a class="anchor-link" href="#perflint">&#182;</a></h3><p><a href="https://github.com/tonybaloney/perflint">perflint</a> is a linter for performance anti-patterns</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-Performance">Python Performance<a class="anchor-link" href="#Python-Performance">&#182;</a></h2><h3 id="airspeed-velocity">airspeed velocity<a class="anchor-link" href="#airspeed-velocity">&#182;</a></h3><p>airspeed velocity (<code>asv</code>) is a tool for benchmarking Python packages over their lifetime.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <b>See also:</b><br>
+    <ul>
+        <li>
+            <a href="https://asv.readthedocs.io">Docs</a>
+        </li>
+        <li>
+            <a href="https://pv.github.io/numpy-bench/">Example NumPy Benchmarks</a>
+        </li>
+        <li>
+            <a href="https://github.com/airspeed-velocity/asv">Repository</a>
+        </li>
+    </ul>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Python-in-Visual-Studio-Code-%E2%80%93-April-2022-Release">Python in Visual Studio Code &#8211; April 2022 Release<a class="anchor-link" href="#Python-in-Visual-Studio-Code-%E2%80%93-April-2022-Release">&#182;</a></h2>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><p>The one Python extension is split into several separate extensions</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.pylint">Pylint</a> was the first expansion to be taken out</li>
+<li>The current version of Pylint uses the proprietary <a href="https://github.com/microsoft/language-server-protocol">Language Server Protocol</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Easily create Jupyter Notebooks</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>The <a href="https://github.com/microsoft/vscode-python/issues/18634">regression</a> when using Conda Environments is fixed</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <strong>See also:</strong><br>
+    <ul>
+        <li>
+            <a href="https://devblogs.microsoft.com/python/python-in-visual-studio-code-april-2022-release/">Python in Visual Studio Code – April 2022 Release</a>
+        </li>
+    </ul>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="BeeWare-is-now-supported-by-Anaconda">BeeWare is now supported by Anaconda<a class="anchor-link" href="#BeeWare-is-now-supported-by-Anaconda">&#182;</a></h2><p>On 21 March, <a href="https://twitter.com/freakboy3742">Russell Keith-Magee</a> became Principal Engineer and Team Lead at Anaconda - and the team he will lead will focus 100% on <a href="https://beeware.org/">BeeWare</a>.</p>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <b>See also:</b><br>
+    <ul>
+        <li>
+            <a href="https://beeware.org/news/buzz/exciting-news-for-the-future-of-beeware/">Exciting news for the future of BeeWare</a>
+        </li>
+    </ul>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="News-from-the-Python-Software-Foundation">News from the Python Software Foundation<a class="anchor-link" href="#News-from-the-Python-Software-Foundation">&#182;</a></h2>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Meta-strengthens-investment-in-the-Python-ecosystem">Meta strengthens investment in the Python ecosystem<a class="anchor-link" href="#Meta-strengthens-investment-in-the-Python-ecosystem">&#182;</a></h3>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Meta uses Python in many of their services - from Instagram to their Ai and data infrastructure:</p>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><a href="https://pytorch.org/">PyTorch</a>  is an ML framework that accelerates the workflow from research prototypes into production</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><a href="https://github.com/facebookincubator/cinder">Cinder</a> is a performance-optimised version of CPython 3.8</li>
+</ul>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><a href="https://pyre-check.org/">Pyre</a> is a A performant type-checker for Python 3</li>
+</ul>
+
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="News-from-the-Python-Software-Foundation">News from the Python Software Foundation<a class="anchor-link" href="#News-from-the-Python-Software-Foundation">&#182;</a></h2><h3 id="Meta-strengthens-investment-in-the-Python-ecosystem">Meta strengthens investment in the Python ecosystem<a class="anchor-link" href="#Meta-strengthens-investment-in-the-Python-ecosystem">&#182;</a></h3><p>Meta’s funding of a second year of the Developer-in-Residence programme stabilises ongoing development. This allows <a href="https://lukasz.langa.pl/">Łukasz Langa</a> to take a broader perspective with the Steering Council and the PSF.</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="News-from-the-Python-Software-Foundation">News from the Python Software Foundation<a class="anchor-link" href="#News-from-the-Python-Software-Foundation">&#182;</a></h2><h3 id="Deb-Nicholson-becomes-the-new-Executive-Director">Deb Nicholson becomes the new Executive Director<a class="anchor-link" href="#Deb-Nicholson-becomes-the-new-Executive-Director">&#182;</a></h3>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-info">
+    <b>See also:</b><br>
+    <ul>
+        <li>
+            <a href="https://pyfound.blogspot.com/2022/04/deb-nicholson-new-executive-director.html">PSF Welcomes New Executive Director Deb Nicholson</a>
+        </li>
+    </ul>
+</div>
+</div>
+</div></div></section></section>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+<script>
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://unpkg.com/reveal.js@4.0.2/dist/reveal.js",
+      "https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"
+    ],
+
+    function(Reveal, RevealNotes){
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            transition: "slide",
+            plugins: [RevealNotes]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+    }
+);
+</script>
+
+</html>
