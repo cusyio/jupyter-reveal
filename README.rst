@@ -87,59 +87,20 @@ Installation
        creating: slides-main/
     …
 
-#. Install Pipenv
+#. Create environment
 
-.. code-block:: console
+   .. code-block:: console
 
-    $ python3 -m pip install --user pipenv
-      Downloading pipenv-2018.7.1-py3-none-any.whl (5.0MB): 5.0MB downloaded
-    Requirement already satisfied (use --upgrade to upgrade): virtualenv in /usr/lib/python3/dist-packages (from pipenv)
-    Installing collected packages: pipenv, certifi, pip, setuptools, virtualenv-clone
-    …
-    Successfully installed pipenv certifi pip setuptools virtualenv-clone
-    Cleaning up...
-
-.. note::
-
-   If pipenv is not available in the shell after the installation, the
-   ``USER_BASE/bin`` directory may have to be specified in ``PATH``.
-
-   * On Linux and MacOS the ``USER_BASE`` can be determined with:
-
-        $ python3 -m site --user-base
-        /Users/veit/.local
-
-     Then the ``bin`` directory must be appended and added to ``PATH``.
-     Alternatively, ``PATH`` can be set permanently by changing ``~/.profile``
-     or ``~/.bash_profile``, in my case::
-
-        export PATH=/Users/veit/.local/bin:$PATH
-
-   * On Windows, the directory can be determined with ``py -m site --user-site``
-     and then ``site-packages`` can be replaced by ``Scripts``. his then gives,
-     for example:
-
-     .. code-block:: console
-
-        C:\Users\veit\AppData\Roaming\Python36\Scripts
-
-     In order to be permanently available, this path can be entered in ``PATH``
-     in the control panel
-
-Further information on user-specific installations can be found in `User
-Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
+        $ cd slides-main
+        $ python3 -m venv .
+        $ source bin/activate
 
 #. Install Python packages:
 
    .. code-block:: console
 
-    $ cd slides-main
-    $ pipenv install
-    Creating a virtualenv for this project…
-    …
-    Installing dependencies from Pipfile.lock (fbb457)…
-    …
-    $ pipenv run jupyter nbextension enable highlighter/highlighter
+        $ python -m pip install -r requirements.txt
+        $ jupyter nbextension enable highlighter/highlighter
         Enabling notebook extension highlighter/highlighter...
               - Validating: OK
 
@@ -149,7 +110,7 @@ Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
 
    .. code-block:: console
 
-    $ pipenv run jupyter contrib nbextension install --user
+    $ jupyter contrib nbextension install --user
     jupyter contrib nbextension install --user
     Installing jupyter_contrib_nbextensions nbextension files to jupyter data directory
     …
@@ -157,7 +118,7 @@ Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
     jupyter-highlight-selected-word-0.2.0 jupyter-latex-envs-1.4.6
     jupyter-nbextensions-configurator-0.4.1
     …
-    $ pipenv run jupyter nbextension enable latex_envs --user --py
+    $ jupyter nbextension enable latex_envs --user --py
     Enabling notebook extension latex_envs/latex_envs...
           - Validating: OK
 
@@ -165,7 +126,7 @@ Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
 
    .. code-block:: console
 
-    $  pipenv run jupyter notebook
+    $  jupyter notebook
 
 #. Turn notebooks into slides with
    :menuselection:`View --> Cell Toolbar --> Slideshow`
@@ -177,7 +138,7 @@ Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
 
    .. code-block:: console
 
-    $ pipenv run jupyter nbconvert my-slides.ipynb --to slides --post serve
+    $ jupyter nbconvert my-slides.ipynb --to slides --post serve
 
 #. Fix link to cusy styles
 

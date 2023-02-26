@@ -1,0 +1,5 @@
+-c constraints.txt
+
+jupyter
+jupyter-contrib-nbextensions
+nbconvert
