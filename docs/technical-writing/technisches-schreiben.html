@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>Technisches Schreiben</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
+<link rel="stylesheet" href="../theme/cusy.css" id="theme">
+<link rel="stylesheet" href="../theme/jupyter.css">
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+</script>
+
+</head>
+
+<body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+
+<div class="reveal">
+<div class="slides"><section ><section >
+<div id="cell-id=094d5884" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Technisches-Schreiben">Technisches Schreiben<a class="anchor-link" href="#Technisches-Schreiben">&#182;</a></h1><img src="../img/frank-duotone.png" alt="Portrait Frank Hofmann" style="float: left; width:256px; margin-right:32px; border-radius: 50%;"/>
+<p>Dipl.-Inf. Frank Hofmann</p>
+<p>CoSin, 17. Juni 2023</p>
+<p style="clear: both; margin-bottom: 0;">
+    <br>
+    <img src="qrcode-technisches-schreiben.svg" alt="QR-Code" style="width:128px; margin: 20px 32px 0 0;"/>
+    <br>
+    <a href="https://slides.cusy.io/technical-writing/technisches-schreiben.html">slides.cusy.io/technical-writing/technisches-schreiben.html</a>
+<p/>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div id="cell-id=0ae20cd2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Technisches-Schreiben">Technisches Schreiben<a class="anchor-link" href="#Technisches-Schreiben">&#182;</a></h1><img src="../img/frank-duotone.png" alt="Portrait Frank Hofmann" style="float: left; width:256px; margin-right:32px; border-radius: 50%;"/>
+<p>Dipl.-Inf. Frank Hofmann</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=109ee957" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Co-Autor des Debian-Paketmanagement-Buchs (→ <a href="https://dpmb.org">https://dpmb.org</a>)</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=852ee994" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Freiberuflicher Redakteur, u.a. für Linux Magazin und Linux Users</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a2958f27" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Trainer und technischer Autor für die cusy GmbH</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=b4c06796" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Einf%C3%BChrung">Einf&#252;hrung<a class="anchor-link" href="#Einf%C3%BChrung">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=cfb21414" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Der Vortrag zeigt euch, wie ihr klarere technische Dokumentationen verfassen und eure technischen Kommunikationsfähigkeiten verbessern könnt. Schließlich erfahrt ihr auch, wie eure Dokumente zugänglicher werden.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=f998063d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Zielgruppe">Zielgruppe<a class="anchor-link" href="#Zielgruppe">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=6f9cab35" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Der Vortrag richtet sich an Personen</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ca6c8d7e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>aus technischen Wissenschaften</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=7bd56b4f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>aus dem Produktmanagement</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a0e94878" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>aus technischen Redaktionen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=75f11d79" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Ziele">Ziele<a class="anchor-link" href="#Ziele">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=6443c723" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ded2a5ca" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Terminologie – einschließlich Abkürzungen und Akronyme – konsistent verwenden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=502a52cf" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Mehrdeutige Pronomen erkennen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=fa1d21fe" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Passiv- in Aktivsätze umwandeln</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ee7a15c9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Strategien für klarere und einprägsamere Sätze</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e1d1cc76" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Listen und Tabellen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=b795528d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Absätze</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=91e0901d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Publikum</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=dedf269d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Dokumente</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=8e3555e3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Ziele"><del>Ziele</del><a class="anchor-link" href="#Ziele">&#182;</a></h3><h4 id="2.-Fortgeschrittene-Themen-des-technischen-Schreibens">2. Fortgeschrittene Themen des technischen Schreibens<a class="anchor-link" href="#2.-Fortgeschrittene-Themen-des-technischen-Schreibens">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=3bb5eb9c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Überarbeiten eures ersten Entwurfs</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=c170422d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Verwenden eines Redaktionsleitfadens</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=f3087101" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Organisieren großer Dokumente</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=83fe004c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Illustrieren</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a5043337" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Erstellen von Beispielcode</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=269023af" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Ziele"><del>Ziele</del><a class="anchor-link" href="#Ziele">&#182;</a></h3><h4 id="3.-Barrierefrei-schreiben">3. Barrierefrei schreiben<a class="anchor-link" href="#3.-Barrierefrei-schreiben">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=7193607e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Hilfreiche Alternativtexte für technische Diagramme schreiben</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=345267de" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Farbkontraste überprüfen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=2ebaf661" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Zugängliche Diagramme erstellen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=d78744bc" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Barrieren in Dokumenten erkennen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=32bae6ac" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=9882952b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Terminologie">Terminologie<a class="anchor-link" href="#Terminologie">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=1e7bebbe" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Definiert-neue-oder-unbekannte-Begriffe">Definiert neue oder unbekannte Begriffe<a class="anchor-link" href="#Definiert-neue-oder-unbekannte-Begriffe">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=0b4ed413" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Lernt, Begriffe zu erkennen, die der Zielgruppe nicht geläufig sind.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=c95f7c74" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wenn ihr einen solchen Begriff entdeckt, wendet folgende Taktiken an:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=8ef39647" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wenn der Begriff bereits existiert, verlinkt auf eine gute Erklärung – Erfindet das Rad nicht neu!</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=b0ed9075" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wenn der Begriff neu eingeführt wird, definiert ihn</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=34124973" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wenn in eurem Dokument viele Begriffe eingeführt werden, sammelt die Definitionen in einem Glossar</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=8b0f45bd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Terminologie">Terminologie<a class="anchor-link" href="#Terminologie">&#182;</a></h3><h4 id="Verwendet-die-Begriffe-konsistent">Verwendet die Begriffe konsistent<a class="anchor-link" href="#Verwendet-die-Begriffe-konsistent">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=a0f54759" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Verwendet durchgängig dasselbe eindeutige Wort: Wenn ihr eine Komponente einmal <em>Dingsda</em> genannt habt, solltet ihr sie nicht ein anderes mal <em>Dingsbums</em> nennen.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=b8b28d42" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Terminologie">Terminologie<a class="anchor-link" href="#Terminologie">&#182;</a></h3><h4 id="Akronyme-richtig-verwenden">Akronyme richtig verwenden<a class="anchor-link" href="#Akronyme-richtig-verwenden">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=5e39dab4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Bei der erstmaligen Verwendung eines unbekannten Akronyms buchstabiert den vollständigen Begriff und setzt das Akronym in Klammern</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=f132a923" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wechselt nicht zwischen dem Akronym und dem vollständigen Begriff hin und her</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=6896d3ea" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Definiert Akronyme nur, wenn sie wesentlich kürzer sind als der vollständige Begriff <strong>und</strong> im Dokument häufig vorkommen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=39889eb0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Mehrdeutige-Pronomen-erkennen">Mehrdeutige Pronomen erkennen<a class="anchor-link" href="#Mehrdeutige-Pronomen-erkennen">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=e05db94d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Viele Pronomen verweisen auf ein zuvor eingeführtes Substantiv.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=4dcbe529" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wie Zeiger in der Programmierung neigen auch Pronomen dazu, fehlerhaft zu sein.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a2a0f25d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In vielen Fällen solltet ihr das Pronomen einfach vermeiden und das Substantiv wiederverwenden.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e89c1551" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Manchmal überwiegt jedoch der Nutzen eines Pronomens sein Risiko (wie in diesem Satz).</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=c930837d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Mehrdeutige-Pronomen-erkennen">Mehrdeutige Pronomen erkennen<a class="anchor-link" href="#Mehrdeutige-Pronomen-erkennen">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=a646f0d4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wir verwenden folgende Richtlinien für Pronomen:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=09628757" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Verwendet Pronomen nur, nachdem ihr das Substantiv eingeführt habt</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=0304883d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Setzt das Pronomen so nah wie möglich an das verweisende Substantiv; wenn mehr als fünf Wörter zwischen dem Substantiv und dem Pronomen liegen, solltet ihr das Substantiv wiederholen, anstatt das Pronomen zu verwenden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=d27627f0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wenn ihr zwischen dem Substantiv und dem Pronomen ein zweites Substantiv einführt, wiederholt das Substantiv, anstatt ein Pronomen zu verwenden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=10c04579" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Passiv--in-Aktivs%C3%A4tze-umwandeln">Passiv- in Aktivs&#228;tze umwandeln<a class="anchor-link" href="#Passiv--in-Aktivs%C3%A4tze-umwandeln">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=fa5d14e4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Formuliert die überwiegende Mehrheit der Sätze in technischen Texten im Aktiv.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=8091df56" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wie können Aktiv und Passiv unterschieden werden?</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e304ce5b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Beim Aktiv handelt eine Person auf ein bestimmtes Ziel hin: <code>Person+Verb+Ziel</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a2b23f86" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Beim Passiv ist es meist umgekehrt: <code>Ziel+Verb+Person</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=3cddc5db" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Passiv--in-Aktivs%C3%A4tze-umwandeln">Passiv- in Aktivs&#228;tze umwandeln<a class="anchor-link" href="#Passiv--in-Aktivs%C3%A4tze-umwandeln">&#182;</a></h3><p>Wie könnt ihr passive Verben erkennen?</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=cf2add43" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Passive Verben setzen sich meist aus einer Form von sein und einem Partizip Perfekt zusammen.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=cef8fe6d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Beispiele:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=86537f71" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote>
+<p>wurde interpretiert</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=1712964e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote>
+<p>wird erzeugt durch</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=8d847ff9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote>
+<p>wurde gebildet von</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=1e9a9525" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Passiv--in-Aktivs%C3%A4tze-umwandeln">Passiv- in Aktivs&#228;tze umwandeln<a class="anchor-link" href="#Passiv--in-Aktivs%C3%A4tze-umwandeln">&#182;</a></h3><p>Imperativverben sind normalerweise aktiv.</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=51bf6da9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In Sätzen mit Imperativverben werden aktive Personen nicht explizit erwähnt, sondern implizit angesprochen.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e275b730" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Beispiele:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=22061661" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote>
+<p>Öffnet die Konfigurationsdatei.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=da37b86c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote>
+<p>Setzt die Variable <code>protected</code> auf <code>False</code></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=5cfeda59" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">Strategien f&#252;r klarere und einpr&#228;gsamere S&#228;tze<a class="anchor-link" href="#Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=43e9e5a4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="W%C3%A4hlt-starke-Verben">W&#228;hlt starke Verben<a class="anchor-link" href="#W%C3%A4hlt-starke-Verben">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=1a1d81bd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Reduziert ungenaue, schwache oder generische Verben wie die folgenden:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=7e242d6f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Formen von sein: <em>ist</em>, <em>sind</em>, <em>waren</em> usw.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=bb3ff6f6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><em>erscheinen</em></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=9b41397b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><em>geschehen</em></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=371a6c8c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">Strategien f&#252;r klarere und einpr&#228;gsamere S&#228;tze<a class="anchor-link" href="#Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">&#182;</a></h3><h3 id="W%C3%A4hlt-starke-Verben">W&#228;hlt starke Verben<a class="anchor-link" href="#W%C3%A4hlt-starke-Verben">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=0d732cac" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Im folgenden ein paar Beispiele, wie ihr schwache Verben durch starke ersetzen könnt:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ca1f4c8e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<table>
+<thead>
+<tr>
+  <th>schwaches Verb</th>
+  <th>starkes Verb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Der Fehler tritt auf, wenn ihr auf <em>Senden</em> klickt.</td>
+  <td>Ein Klick auf Senden löst den Fehler aus.</td>
+</tr>
+<tr>
+  <td>Diese Fehlermeldung kommt, wenn …</td>
+  <td>Die Anwendung überprüft die Eingabe und erstellt eine möglichst hilfreiche Fehlermeldung</td>
+</tr>
+<tr>
+  <td>Wir sind sehr vorsichtig , um sicherzustellen</td>
+  <td>Wir prüfen sorgfältig</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=189ee796" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">Strategien f&#252;r klarere und einpr&#228;gsamere S&#228;tze<a class="anchor-link" href="#Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">&#182;</a></h3><h4 id="Kurze,-pr%C3%A4gnante-S%C3%A4tze">Kurze, pr&#228;gnante S&#228;tze<a class="anchor-link" href="#Kurze,-pr%C3%A4gnante-S%C3%A4tze">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=79ef7a0d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Eine kürzere Dokumentation liest sich schneller als eine längere Dokumentation</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=516f9f42" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Eine kürzere Dokumentation ist in der Regel leichter zu pflegen als eine längere Dokumentation</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=de8457a8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Zusätzliche Dokumentationszeilen bringen zusätzliche Fehlerquellen mit sich</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=dface8ac" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">Strategien f&#252;r klarere und einpr&#228;gsamere S&#228;tze<a class="anchor-link" href="#Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">&#182;</a></h3><h4 id="Kurze,-pr%C3%A4gnante-S%C3%A4tze">Kurze, pr&#228;gnante S&#228;tze<a class="anchor-link" href="#Kurze,-pr%C3%A4gnante-S%C3%A4tze">&#182;</a></h4><p>Konzentriert euch in jedem Satz auf eine einzige Idee, einen Gedanken oder ein Konzept.</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=f04aaf43" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Negativbeispiel:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=7e771895" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<blockquote>
+<p>Die <strong>Kornshell</strong> (Eigenschreibweise <em>KornShell</em>, auch als <code>ksh</code>, <code>ksh86</code>, <code>ksh88</code> und <code>ksh93</code> bezeichnet) ist ein von David Korn entwickelter <a href="https://de.wikipedia.org/wiki/Kommandozeileninterpreter">Kommandozeileninterpreter</a> wie auch die Beschreibung der Skriptsprache, welche durch diesen Interpreter implementiert wird.</p>
+</blockquote>
+<p>Quelle: <a href="https://de.wikipedia.org/wiki/Kornshell">Wikipedia: Kornshell</a></p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=8c7f9897" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">Strategien f&#252;r klarere und einpr&#228;gsamere S&#228;tze<a class="anchor-link" href="#Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">&#182;</a></h3><h4 id="Wandelt-lange-S%C3%A4tze-in-Listen-um">Wandelt lange S&#228;tze in Listen um<a class="anchor-link" href="#Wandelt-lange-S%C3%A4tze-in-Listen-um">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=a8532fac" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In vielen langen technischen Sätzen steckt eine Liste, die besser in einer Liste gegliedert werden kann:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e342d1c0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>wenn die Konjunktion <em>oder</em> in einem langen Satz seht</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=305e77df" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>wenn ein langer Satz eine Aufzählung enthält</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=50767571" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">Strategien f&#252;r klarere und einpr&#228;gsamere S&#228;tze<a class="anchor-link" href="#Strategien-f%C3%BCr-klarere-und-einpr%C3%A4gsamere-S%C3%A4tze">&#182;</a></h3><h4 id="Eliminiert-oder-reduziert-%C3%BCberfl%C3%BCssige-W%C3%B6rter">Eliminiert oder reduziert &#252;berfl&#252;ssige W&#246;rter<a class="anchor-link" href="#Eliminiert-oder-reduziert-%C3%BCberfl%C3%BCssige-W%C3%B6rter">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=b3e29b12" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Viele Sätze enthalten Füllwörter, die Platz wegnehmen, die nichts zum Verständnis beitragen.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=675115e1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Beispiele:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=1a41c6de" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<table>
+<thead>
+<tr>
+  <th>wortreich</th>
+  <th>prägnant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>zu diesem Zeitpunkt</td>
+  <td>jetzt</td>
+</tr>
+<tr>
+  <td>bestimmt den Wert von</td>
+  <td>findet</td>
+</tr>
+<tr>
+  <td>in der Lage sein … zu tun</td>
+  <td>können</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=9b05dfd7" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Listen-und-Tabellen">Listen und Tabellen<a class="anchor-link" href="#Listen-und-Tabellen">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=d4a1aedf" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Listen und Tabellen können vielschichtige Themen ordnen. Wenn sich euer Thema auf eine solche Weise ordnen lässt, solltet ihr euren Text entsprechend umwandeln.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=fe26c358" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Listen-und-Tabellen">Listen und Tabellen<a class="anchor-link" href="#Listen-und-Tabellen">&#182;</a></h3><h4 id="W%C3%A4hlt-den-richtigen-Listentyp">W&#228;hlt den richtigen Listentyp<a class="anchor-link" href="#W%C3%A4hlt-den-richtigen-Listentyp">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=d0bb4c0d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Aufzählungen</strong> werden für ungeordnete Inhalte verwendet, bei denen die Änderung der Reihenfolge nicht die Bedeutung verändert.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=3ddc37e6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Nummerierte Listen</strong> werden verwendet, wenn die Reihenfolge der einzelnen Punkte bedeutend ist.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=6381d7e2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Definitionslisten</strong> werden verwendet, um Begriffe zu definieren, z.B.:</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=917999f2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<dl>
+    <dt><code>for</code></dt>
+    <dd>zur Iteration über die Elemente einer Sequenz</dd>
+    <dt><code>while</code></dt>
+    <dd>zur Wiederholung einer Schleife, solange ein logischer Ausdruck wahr ist.</dd>
+</dl>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=8098b557" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Verschachtelte Listen</strong> werden für hierarchische Inhalte verwendet</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=05ee8a64" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<p>Gibt es Ober- und Unterpunkte, so können sich verschachtelte Listen empfehlen. Beachtet dabei, dass auch bei der Verschachtelung die drei Listentypen kombiniert werden können</p>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=708d8f64" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Listen-und-Tabellen">Listen und Tabellen<a class="anchor-link" href="#Listen-und-Tabellen">&#182;</a></h3><h4 id="Satzzeichen-f%C3%BCr-Listenelemente">Satzzeichen f&#252;r Listenelemente<a class="anchor-link" href="#Satzzeichen-f%C3%BCr-Listenelemente">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=0ae3c84a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Nur wenn das Listenelement aus einem oder mehreren Sätzen besteht, solltet ihr Großschreibung und Satzzeichen verwenden.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=d3db3d40" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Listen-und-Tabellen">Listen und Tabellen<a class="anchor-link" href="#Listen-und-Tabellen">&#182;</a></h3><h4 id="Erstellt-n%C3%BCtzliche-Tabellen">Erstellt n&#252;tzliche Tabellen<a class="anchor-link" href="#Erstellt-n%C3%BCtzliche-Tabellen">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=c72c9de8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Tabellen sind geeignet für Inhalte, bei denen jeder einzelne Punkt in ein oder mehreren Kategorien erläutert wird. Achtet bei Tabellen darauf, dass</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e64defed" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>jede Spalte aussagekräftig beschriftet ist</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=089585d8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>jede Zelle nur wenig Text enthalten darf</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=6c0464aa" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>jede Spalte möglichst nur von einem Datentyp sein sollte</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=571392e1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Abs%C3%A4tze">Abs&#228;tze<a class="anchor-link" href="#Abs%C3%A4tze">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=2b718ad2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Beim Schreiben entwirren wir einzelne Aspekte eines Themas und bringen sie in eine logische Abfolge, die anderen das Thema zugänglich macht.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=09d514b1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Abs%C3%A4tze">Abs&#228;tze<a class="anchor-link" href="#Abs%C3%A4tze">&#182;</a></h3><h4 id="Schreibt-einen-tollen-Er%C3%B6ffnungssatz">Schreibt einen tollen Er&#246;ffnungssatz<a class="anchor-link" href="#Schreibt-einen-tollen-Er%C3%B6ffnungssatz">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=eeded9a5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Der Anfangssatz ist der wichtigste Satz eines jeden Absatzes. Dies hilft beim Querlesen, das Thema des Absatzes zu erfassen ohne alle nachfolgenden Sätze zu lesen. Daher kommt ihm eine besondere Bedeutung zu.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=b460a4e4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Abs%C3%A4tze">Abs&#228;tze<a class="anchor-link" href="#Abs%C3%A4tze">&#182;</a></h3><h4 id="Konzentriert-euch-in-jeden-Absatz-auf-ein-Thema">Konzentriert euch in jeden Absatz auf ein Thema<a class="anchor-link" href="#Konzentriert-euch-in-jeden-Absatz-auf-ein-Thema">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=6c5e0802" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Ein Absatz sollte eine unabhängige logische Einheit darstellen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=77a3e197" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Beschränkt euch in jedem Absatz auf das aktuelle Thema</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=67090331" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Beschreibt nicht, was in einem zukünftigen Thema passieren wird oder was in einem vergangenen Thema geschehen ist</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=0cb35c37" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Streicht bei der Überarbeitung rücksichtslos jeden Satz, der nicht direkt mit dem aktuellen Thema zusammenhängt – oder verschiebt ihn in einen anderen Absatz</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=4534b522" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Abs%C3%A4tze">Abs&#228;tze<a class="anchor-link" href="#Abs%C3%A4tze">&#182;</a></h3><h4 id="Macht-Abs%C3%A4tze-nicht-zu-lang-oder-zu-kurz">Macht Abs&#228;tze nicht zu lang oder zu kurz<a class="anchor-link" href="#Macht-Abs%C3%A4tze-nicht-zu-lang-oder-zu-kurz">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=dae22cd2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Lange Absätze sind visuell einschüchternd. Sehr lange Absätze bilden eine gefürchtete <em>Textwand</em>, die von den Lesenden ignoriert wird. Sie begrüßen im Allgemeinen Absätze mit drei bis fünf Sätzen, vermeiden jedoch Absätze mit mehr als sieben Sätzen. Zieht bei der Überarbeitung in Betracht, sehr lange Absätze in zwei separate Absätze aufzuteilen.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=f1e97f85" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Umgekehrt solltet ihr die Absätze nicht zu kurz gestalten. Wenn euer Dokument viele Ein-Satz-Absätze enthält, ist eure Gliederung mangelhaft. Sucht nach Möglichkeiten, diese Ein-Satz-Absätze zu zusammenhängenden Mehr-Satz-Absätzen oder möglicherweise zu Listen zusammenzufassen.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=c8e75c2c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Abs%C3%A4tze">Abs&#228;tze<a class="anchor-link" href="#Abs%C3%A4tze">&#182;</a></h3><h4 id="Beantwortet-Was,-Warum-und-Wie">Beantwortet <em>Was</em>, <em>Warum</em> und <em>Wie</em><a class="anchor-link" href="#Beantwortet-Was,-Warum-und-Wie">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=6cc1fc90" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Gute Absätze beantworten die folgenden drei Fragen:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=d342d979" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Was</strong> wollt ihr mitteilen?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e05d9702" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Warum</strong> ist es wichtig, dies zu wissen?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=5b9c8659" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li><strong>Wie</strong> sollte dieses Wissen genutzt werden?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=6361df0a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=0d27cc3c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Stellt sicher, dass euer Dokument die Informationen enthält, die euer Publikum braucht, aber noch nicht hat.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=22955b6a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Daher solltet ihr</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=b1010917" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>eure Zielgruppe definieren</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a877e7e3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol start="2">
+<li>bestimmen, was eure Zielgruppe lernen soll</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=1337a5e6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol start="3">
+<li>die Dokumentation eurer Zielgruppe anpassen</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=b25b3679" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="1.-Eure-Zielgruppe-definieren">1. Eure Zielgruppe definieren<a class="anchor-link" href="#1.-Eure-Zielgruppe-definieren">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=8e3fa378" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Seriöse Dokumentationsprojekte verwenden viel Zeit und Energie darauf, ihre Zielgruppe zu definieren.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=5abf9e16" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Diese Bemühungen beinhalten:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=7df12206" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Umfragen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ddead9a1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Studien zur Usability</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=c4494fee" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Fokusgruppen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a632a5eb" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Dokumentationstests</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=972cfe3c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="1.-Eure-Zielgruppe-definieren">1. Eure Zielgruppe definieren<a class="anchor-link" href="#1.-Eure-Zielgruppe-definieren">&#182;</a></h4><p>Zunächst könnt ihr jedoch mit einen einfacheren Ansatz starten. Arbeiten die Personen im</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=73a955af" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Software-Engineering</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=4467e964" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>in nicht-technischen Bereichen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=d8aac79f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>im Forschungsbereich</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=e2b8e647" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="2.-Bestimmen,-was-eure-Zielgruppe-lernen-soll">2. Bestimmen, was eure Zielgruppe lernen soll<a class="anchor-link" href="#2.-Bestimmen,-was-eure-Zielgruppe-lernen-soll">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=f33d24ec" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Schreibt eine Liste mit allem, was eure Zielgruppe lernen soll, um ihre Ziele zu erreichen.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=039e43ee" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In manchen Fällen sollte die Liste Aufgaben enthalten, die die Zielgruppe ausführen muss.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=5a358dc8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>kennen die meisten Personen im Software-Engineering die gängigen Sortieralgorithmen, die <a href="https://de.wikipedia.org/wiki/Landau-Symbole">Landau-Symbole</a> und mindestens eine Programmiersprache. Ihr könnt euch also darauf verlassen, dass sie wissen, was <code>O(n)</code> bedeutet, aber ihr könnt euch nicht darauf verlassen, dass nicht-technische Rollen <code>O(n)</code> kennen.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=c1b1fb38" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Ein Forschungsbericht, der sich an medizinisches Fachpersonal richtet, sollte ganz anders aussehen als ein Zeitungsartikel über dieselbe Forschung, der sich an ein Laienpublikum richtet.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=415722f3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Die Vorlesung über einen neuen Ansatz maschinellen Lernens für Studierende mit Hochschulabschluss sollte sich unterscheiden von derjenigen, die für Studierende im ersten Studienjahr gehalten wird.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=26541bd5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="2.-Bestimmen,-welche-Informationen-wichtig-sind">2. Bestimmen, welche Informationen wichtig sind<a class="anchor-link" href="#2.-Bestimmen,-welche-Informationen-wichtig-sind">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=f0e09545" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Schreibt eine Liste mit allem, was Eure Zielgruppe lernen soll, um Ziele zu erreichen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=8e1c6050" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Beachtet, dass eure Zielgruppe manchmal Aufgaben in einer bestimmten Reihenfolge bewältigen muss</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=b93862d8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Konzentriert eure Liste auf die Informationen, die eure Zielgruppe lernen sollte</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=44244f31" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">3. Die Dokumentation eurer Zielgruppe anpassen<a class="anchor-link" href="#3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=a48d2081" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Eure Erklärungen sollen die Neugier eures Publikums befriedigen und nicht eure eigene.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=d562ece5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Um die Erwartungen eures Publikums zu erfüllen, benötigt ihr Einfühlungsvermögen.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=b69d1434" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Um die Dokumentation an euer Publikum anzupassen, gibt es keine einfachen Antworten.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=8b252495" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wir können jedoch einige Parameter nennen, auf die ihr euch konzentrieren könnt:</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=6eb78cbf" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">3. Die Dokumentation eurer Zielgruppe anpassen<a class="anchor-link" href="#3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">&#182;</a></h4><h5 id="Wortschatz-und-Konzepte">Wortschatz und Konzepte<a class="anchor-link" href="#Wortschatz-und-Konzepte">&#182;</a></h5>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=ae19c845" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Achtet auf die Nähe zu eurem Publikum:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=4a6b2c2b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Stimmt das Vokabular auf euer Publikum ab (→ <a href="#/2/0/0">Terminologie</a>)</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=dc5add87" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Je größer euer Zielpublikum ist, desto geringer wird das gemeinsame Wissen sein.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=97f70fc4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Je weniger gemeinsame Erfahrungen ihr voraussetzen könnt, desto mehr müsst ihr erklären.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=2b0e0827" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">3. Die Dokumentation eurer Zielgruppe anpassen<a class="anchor-link" href="#3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">&#182;</a></h4><h5 id="Fluch-des-Wissens">Fluch des Wissens<a class="anchor-link" href="#Fluch-des-Wissens">&#182;</a></h5>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=a5867e02" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wenn ihr beiläufig auf subtile Wechselwirkungen und tief greifende Systeme verweist, werden Neulinge auf diesem Gebiet eure Erklärungen möglicherweise nicht verstehen. Sie können noch nicht an dieses Wissen anknüpfen.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=4b7356ab" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">3. Die Dokumentation eurer Zielgruppe anpassen<a class="anchor-link" href="#3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">&#182;</a></h4><h5 id="Einfache-Worte">Einfache Worte<a class="anchor-link" href="#Einfache-Worte">&#182;</a></h5>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=32d612b6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Es gibt einen erheblichen Prozentsatz im Publikum, dessen Erstsprache nicht die Sprache eurer technischen Dokumentation ist.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=e5a1d2e9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Zieht einfache Wörter komplexen Wörtern vor</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=31f529ce" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Zieht gebräuchliche Wörter seltenen vor</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=89cb0246" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Publikum">Publikum<a class="anchor-link" href="#Publikum">&#182;</a></h3><h4 id="3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">3. Die Dokumentation eurer Zielgruppe anpassen<a class="anchor-link" href="#3.-Die-Dokumentation-eurer-Zielgruppe-anpassen">&#182;</a></h4><h5 id="Kulturelle-Neutralit%C3%A4t-und-Redewendungen">Kulturelle Neutralit&#228;t und Redewendungen<a class="anchor-link" href="#Kulturelle-Neutralit%C3%A4t-und-Redewendungen">&#182;</a></h5>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=92723e7e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Haltet eure Texte kulturell neutral</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=2e9ed7b5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Verlangt von eurem Publikum nicht, dass sie Feinheiten im Fußball, Baseball oder Sumo kennen, um eure Dokumentation zu verstehen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=cec26c54" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Vermeidet Idiome, also Phrasen, deren Gesamtbedeutung von der wörtlichen Bedeutung der einzelnen Wörter in dieser Phrase abweicht, z.B. <em>ein Kinderspiel</em></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=5d662220" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Beachtet, dass einige Übersetzungssoftware verwenden werden, um eure Dokumentation zu lesen.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=dad65e8e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Dokumente">Dokumente<a class="anchor-link" href="#Dokumente">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=ae0600f7" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Ihr könnt Sätze schreiben, ihr könnt Absätze schreiben. Nun sind all diese Absätze zu einem kohärenten Dokument zusammenzufassen.</p>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=2887ae52" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Dokumente">Dokumente<a class="anchor-link" href="#Dokumente">&#182;</a></h3><h4 id="Legt-den-Umfang-eures-Dokuments-fest">Legt den Umfang eures Dokuments fest<a class="anchor-link" href="#Legt-den-Umfang-eures-Dokuments-fest">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=0ede3e67" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol>
+<li>Ein gutes Dokument beginnt mit der Festlegung seines Umfangs.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=29118839" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol start="2">
+<li>Ein besseres Dokument definiert zusätzlich die nicht behandelten Themen, von denen die Zielgruppe vernünftigerweise erwarten könnte, dass sie in eurem Dokument behandelt werden.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=00bb8c47" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ol start="3">
+<li>Diese Angaben sind nicht nur für euer Publikum, sondern auch für euch von Vorteil: Wenn sich der Inhalt eures Dokuments während des Schreibens von euren Angaben entfernt, müsst ihr entweder euer Dokument neu ausrichten oder eure Umfangsangabe ändern.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=65b3d6cc" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Dokumente">Dokumente<a class="anchor-link" href="#Dokumente">&#182;</a></h3><h4 id="Nennt-euer-Publikum">Nennt euer Publikum<a class="anchor-link" href="#Nennt-euer-Publikum">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=da00db8a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Ein gutes Dokument benennt ausdrücklich sein Publikum</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=89d5f35a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Neben den möglichen Rollen des Publikums können auch auch die erforderlichen Kenntnisse oder Erfahrungen angeben werden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=b550916c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>In einigen Fällen sollte auch die vorausgesetzte Lektüre oder Kursarbeit angegeben werden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=96ffd1c9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Dokumente">Dokumente<a class="anchor-link" href="#Dokumente">&#182;</a></h3><h4 id="Fasst-die-wichtigsten-Punkte-gleich-zu-Beginn-zusammen">Fasst die wichtigsten Punkte gleich zu Beginn zusammen<a class="anchor-link" href="#Fasst-die-wichtigsten-Punkte-gleich-zu-Beginn-zusammen">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=eafd20ae" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Ihr könnt nicht erwarten, dass alle Seiten eures Dokuments gelesen werden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=7cf03e38" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Stellt daher sicher, dass der Anfang eures Dokuments die wichtigsten Fragen beantwortet</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=fc445667" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Der Anfang eines Dokuments ist daher am schwierigsten zu schreiben</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=19748974" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Seid darauf vorbereitet, die erste Seite mehrmals zu überarbeiten</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=6d2ebc7d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="1.-Grundlagen-des-technischen-Schreibens">1. Grundlagen des technischen Schreibens<a class="anchor-link" href="#1.-Grundlagen-des-technischen-Schreibens">&#182;</a></h2><h3 id="Dokumente">Dokumente<a class="anchor-link" href="#Dokumente">&#182;</a></h3><h4 id="Schreibt-f%C3%BCr-euer-Publikum">Schreibt f&#252;r euer Publikum<a class="anchor-link" href="#Schreibt-f%C3%BCr-euer-Publikum">&#182;</a></h4>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=a3f1b14b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Definiert die Bedürfnisse eurer Zielgruppe</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=bfa84309" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wer ist euer Zielpublikum?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ad5f97ca" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Was ist das Ziel der Zielgruppe? Warum lesen sie dieses Dokument?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=6ecf1a99" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Was weiß euer Publikum bereits, bevor es euer Dokument liest?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=6b56893e" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Was sollte euer Publikum wissen oder können, nachdem es euer Dokument gelesen hat?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=43835bf3" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wie muss euer Dokument organisiert sein, damit es den Bedürfnissen eurer Zielgruppe entspricht?</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=bdf0d4d9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Zusammenfassung">Zusammenfassung<a class="anchor-link" href="#Zusammenfassung">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=cc56fd9d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>In den Grundlagen technischen Schreibens behandelten wir:</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=385022f5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>das konsistente verwenden von Begriffen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=f9990963" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>zweideutige Pronomen vermeiden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=270f9f05" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>die aktive Schreibweise dem Passiv vorzuziehen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=59048ad5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>spezifische statt vage Verben wählen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=db8c1406" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>überflüssige Wörter zu streichen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=3f864191" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Zusammenfassung">Zusammenfassung<a class="anchor-link" href="#Zusammenfassung">&#182;</a></h2><p>In den Grundlagen technischen Schreibens behandelten wir:</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=b26bfd69" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>jeden Satz auf einen einzigen Gedanken zu konzentrieren</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=2026018a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>lange Sätze in Listen umzuwandeln</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=0e099e73" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>nummerierte Listen zu verwenden, wenn die Reihenfolge wichtig ist, und eine Aufzählungsliste, wenn die Reihenfolge unwichtig ist</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=d7f0cf40" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>gute Einleitungssätze zu verfassen, die den zentralen Punkt eines Absatzes festlegen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=a402a349" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>euch in jeden Absatz auf ein einziges Thema zu konzentrieren</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=4f940cfd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>festzulegen, was euer Publikum lernen soll</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=f8f1ce09" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>die Dokumentation an euer Publikum anzupassen</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=eda6a0d1" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>legt die wichtigsten Punkte eures Dokuments zu Beginn fest</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section><section >
+<div id="cell-id=a16d3b5a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Zusammenfassung">Zusammenfassung<a class="anchor-link" href="#Zusammenfassung">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment" >
+<div id="cell-id=557f81c0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Herzlichen Glückwunsch – ihr kennt nun die Grundlagen technischen Schreibens.</p>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=96c272b7" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Wenn ihr die Prinzipien des technischen Schreibens praktisch üben wollt, bieten wir euch einen entsprechenden Kurs an</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=1c62c8c8" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Dort behandeln wir auch fortgeschrittene Themen des technischen Schreibens und barrierefreies Schreiben</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div><div class="fragment" >
+<div id="cell-id=ee5de525" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Schließlich erarbeiten wir mit euch auch gerne einen Redaktionsleitfaden</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></div></section></section><section ><section >
+<div id="cell-id=89693c99" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Technisches-Schreiben">Technisches Schreiben<a class="anchor-link" href="#Technisches-Schreiben">&#182;</a></h1><h2 id="Habt-ihr-Fragen?">Habt ihr Fragen?<a class="anchor-link" href="#Habt-ihr-Fragen?">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=07ccd9bd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Technisches-Schreiben">Technisches Schreiben<a class="anchor-link" href="#Technisches-Schreiben">&#182;</a></h1><img src="../img/frank-duotone.png" alt="Portrait Frank Hofmann" style="float: left; width:256px; margin-right:32px; border-radius: 50%;"/>
+<p>Dipl.-Inf. Frank Hofmann</p>
+<p><a href="https://cusy.io/fho">cusy.io/fho</a><br><a href="mailto:frank@cusy.io">frank@cusy.io</a></p>
+<p style="clear: both; margin-bottom: 0;">
+    <br>
+    <img src="qrcode-technisches-schreiben.svg" alt="QR-Code" style="width:128px; margin: 20px 32px 0 0;"/>
+    <br>
+    <a href="https://slides.cusy.io/technical-writing/technisches-schreiben.html">slides.cusy.io/technical-writing/technisches-schreiben.html</a>
+<p/>
+
+</div>
+</div>
+</div>
+</div></section></section>
+</div>
+</div>
+</body>
+
+
+
+
+
+
+
+<script>
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://unpkg.com/reveal.js@4.0.2/dist/reveal.js",
+      "https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"
+    ],
+
+    function(Reveal, RevealNotes){
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            transition: "slide",
+            slideNumber: "",
+            plugins: [RevealNotes]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+    }
+);
+</script>
+
+</html>
