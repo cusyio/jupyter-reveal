@@ -93,7 +93,7 @@ Installation
 
         $ cd slides-main
         $ python3 -m venv .
-        $ source bin/activate
+        $ . bin/activate
 
 #. Install Python packages:
 
