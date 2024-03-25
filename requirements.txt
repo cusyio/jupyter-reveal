@@ -1,5 +1,5 @@
 -c constraints.txt
 
-jupyter
-jupyter-contrib-nbextensions
-nbconvert
+jupyter==1.0.0
+jupyter-contrib-nbextensions==0.7.0
+nbconvert==7.16.3
