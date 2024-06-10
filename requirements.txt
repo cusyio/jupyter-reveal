@@ -1,6 +1,6 @@
 -c constraints.txt
 
-jupyter
+jupyter==1.0.0
 jupyter-contrib-nbextensions
 nbconvert
 plotnine[all]
