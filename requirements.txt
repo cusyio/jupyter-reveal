@@ -3,6 +3,6 @@
 jupyter==1.0.0
 jupyter-contrib-nbextensions==0.7.0
 nbconvert==7.16.4
-plotnine[all]
+plotnine[all]==0.13.6
 altair
 vega_datasets
