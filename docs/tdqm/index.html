@@ -13,9 +13,9 @@
   function addWidgetsRenderer() {
     var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
     var scriptElement = document.createElement('script');
-    
+
     var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
-    
+
     var widgetState;
 
     // Fallback for older version:
@@ -23,9 +23,9 @@
       widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
 
       if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
-        
+
         var widgetRendererSrc = 'https://unpkg.com/@jupyter-js-widgets@*/dist/embed.js';
-        
+
       }
     } catch(e) {}
 
@@ -7989,10 +7989,10 @@ main {
 <dd>für String-Vergleiche.</dd>
 <dt><a href="https://www.python4data.science/de/latest/clean-prep/deduplicate.html#3.-Dedupe">Dedupe</a></dt>
 <dd>verwendet ein flaches neuronales Netzwerk, um aus einem kleinen Training zu lernen.</dd>
-<dt><a href="https://www.python4data.science/de/latest/clean-prep/bulwark.html">Bulwark</a></dt>
-<dd>erlaubt eigenschaftsbasiertes Testen von pandas-Dataframes, auch mit eigenen benutzerdefinierten Funktionen erstellen.</dd>
 <dt><a href="https://www.python4data.science/de/latest/clean-prep/hypothesis.html">Hypothesis</a></dt>
 <dd>für Property-basierte Tests. Hypothesis kann auch Mock-Objekte und Tests für Numpy-Datentypen bereitstellen.</dd>
+<dt><a href="https://www.python4data.science/de/latest/clean-prep/tdda.html">TDDA</a></dt>
+<dd>verwendet NumPy-Arrays oder pandas DataFrames und eine Reihe von Constraints zu ermitteln, die als JSON-Datei gespeichert werden.</dd>
 </dl>
 <p>…</p>
 </div>
@@ -8008,8 +8008,6 @@ main {
 <h1 id="3.-Automatisierte-Datenqualit%C3%A4ts%C3%BCberpr%C3%BCfung">3. Automatisierte Datenqualitätsüberprüfung<a class="anchor-link" href="#3.-Automatisierte-Datenqualit%C3%A4ts%C3%BCberpr%C3%BCfung">¶</a></h1><p>Darüberhinaus gibt es viele Bibliotheken, die die Überprüfung von Daten ermöglichen:</p>
 <p>…</p>
 <dl>
-<dt><a href="https://www.python4data.science/de/latest/clean-prep/tdda.html">TDDA</a></dt>
-<dd>verwendet NumPy-Arrays oder pandas DataFrames und eine Reihe von Constraints zu ermitteln, die als JSON-Datei gespeichert werden.</dd>
 <dt><a href="https://www.python4data.science/de/latest/clean-prep/voluptuous.html">Voluptuous</a></dt>
 <dd>für das Erstellen von Schemaprüfungen.</dd>
 <dt><a href="https://www.python4data.science/de/latest/clean-prep/scikit-learn-reprocessing.html">sklearn.preprocessing</a></dt>
