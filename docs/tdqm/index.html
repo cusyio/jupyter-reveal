@@ -8671,7 +8671,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ol>
-<li><a href="#/5/10">Datenfluss und -integration</a></li>
+<li><a href="#/5/14">Datenfluss und -integration</a></li>
 </ol>
 </div>
 </div>
@@ -8684,7 +8684,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ol start="2">
-<li><a href="#/5/14">Datenspeicher</a></li>
+<li><a href="#/5/21">Datenspeicher</a></li>
 </ol>
 </div>
 </div>
@@ -8697,7 +8697,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ol start="3">
-<li><a href="#/5/20">Zugriff und Nutzung</a></li>
+<li><a href="#/5/31">Zugriff und Nutzung</a></li>
 </ol>
 </div>
 </div>
@@ -8710,7 +8710,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ol start="4">
-<li><a href="#/5/23">Governance und Metadaten</a></li>
+<li><a href="#/5/34">Governance und Metadaten</a></li>
 </ol>
 </div>
 </div>
@@ -9168,7 +9168,7 @@ main {
         Metadaten und Katalogisierung
     </dt>
 <dd>
-        Systeme, die Datensätze, Schemata und Datenherkunft dokumentieren, s. a. <a href="#/5/25">Datenkataloge</a>.<br/>Ohne geeignete Metadaten droht ein sogenannter Datensumpf (Data Swamp).
+        Systeme, die Datensätze, Schemata und Data-Lineage dokumentieren, s. a. <a href="#/5/25">Datenkataloge</a>.<br/>Ohne geeignete Metadaten droht ein sogenannter Datensumpf (Data Swamp).
     </dd>
 </dl>
 </div>
@@ -9433,36 +9433,432 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Datenherkunft-und-Beobachtbarkeit">4.2.4.1 Datenherkunft und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Datenherkunft-und-Beobachtbarkeit">¶</a></h4>
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4>
 </div>
 </div>
 </div>
 </div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6e0855fc-a050-4f80-9473-c6f19e08fbae">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c38a3d5e-9d84-4986-9543-fba39306a4c5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Tools zur Datenherkunft (Lineage) verfolgen den Weg der Daten durch die Systeme und zeigen auf, wie sie transformiert wurden und woher sie stammen. Diese Transparenz ist für Audits, die Fehlerbehebung und das Verständnis von Abhängigkeiten unerlässlich. Beobachtungsplattformen können die Datenherkunft ergänzen, indem sie die Leistung der Pipelines und Kennzahlen zur Datenqualität überwachen.</p>
+<p><a href="https://de.wikipedia.org/wiki/Data-Lineage">Data-Lineage</a> (Datenherkunft, auch <em>Data Provenance</em> oder <em>Data Pedigree</em>) ist keine reine Dokumentationsaufgabe, sondern operative Infrastruktur. Da Daten-Ökosysteme immer komplexer werden und die Anzahl der Tools zunimmt, verflechten sich die Beziehungen zwischen Daten zunehmend. Tools zur Data-Lineage verfolgen den Weg der Daten durch die Systeme und zeigen auf, woher sie stammen, wie sie transformiert wurden und wo sie konsumiert werden.</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab99a95e-e7d2-4385-a4c3-340177d3575d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Sie unterstützen euch in folgenden Bereichen:</p>
 </div>
 </div>
 </div>
 </div></div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=29137765-5a24-44fd-87e7-3a81c457bc2d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4a17c714-43d0-499e-bec1-3dbabe9bd5c2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Datenherkunft-und-Beobachtbarkeit">4.2.4.1 Datenherkunft und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Datenherkunft-und-Beobachtbarkeit">¶</a></h4><dl>
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
 <dt>
-<a href="https://www.loc.gov/standards/premis/">PREMIS</a>
-</dt>
+        Folgeabschätzung
+    </dt>
 <dd>
-<strong>Pre</strong>servation <strong>M</strong>etadata: <strong>I</strong>mplementation <strong>S</strong>trategies ist ein weit verbreiteter Standard für die digitale Langzeitarchivierung, der sicherstellt, dass Metadaten Datenherkunft, Rechteverwaltung und strukturelle Beziehungen für eine langfristige Zugänglichkeit umfassen.
+        Bevor ihr ein Schema ändert, einen Datensatz als veraltet kennzeichnet oder eine Plattform migriert, müsst ihr die Auswirkungen kennen. Die Data-Lineage zeigt jedes nachgelagerte Dashboard, Modell, jede Pipeline und jedes Team an, das von den Daten abhängt, die ihr ändern möchtet.
     </dd>
 </dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=928aef2b-e391-401a-b76d-384337dbf950">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        Fehleranalyse
+    </dt>
+<dd>
+        Wenn eine Kennzahl nicht den Erwartungen entspricht oder eine Pipeline ausfällt, könnt ihr mithilfe der Data-Lineage das Problem über die Transformationsschichten zurückverfolgen, bis ihr die genaue Quelle findet, an der der Fehler aufgetreten ist. War es eine Schema-Änderung? Eine fehlgeschlagene Datenerfassung? Eine Transformation zu Nullwerten? Die Data-Lineage liefert die Übersicht, um diese Fragen schnell zu beantworten.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b8763149-6e7e-4db2-914b-c51a4a4e1bf5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        Compliance und Audit
+    </dt>
+<dd>
+        Vorschriften wie die <a href="https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung">DSGVO</a>, SOC 2 (<strong>S</strong>ystem and <strong>O</strong>rganization <strong>C</strong>ontrols <strong>2</strong>) und HIPAA (<strong>H</strong>ealth <strong>I</strong>nsurance <strong>P</strong>ortability and <strong>A</strong>ccountability <strong>A</strong>ct) verlangen von Unternehmen den Nachweis, wie personenbezogene und sensible Daten durch ihre Systeme fließen. Lineage liefert den Prüfpfad und zeigt, woher die Daten stammen, wie sie transformiert werden, wer darauf zugreift und wo sie landen.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=687ce23d-2ad2-43b4-b422-44d80b428375">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        Änderungsmanagement und sicheres Löschen
+    </dt>
+<dd>
+        Im Laufe der Zeit sammeln sich Altsysteme und ungenutzte Datensätze an. In fast allen Unternehmen gibt es Tabellen, die niemand mit Sicherheit löschen kann, da niemand weiß, was davon abhängt. Erst Lineage macht diese Entscheidungen sicher, indem es alle nachgelagerten Abhängigkeiten aufzeigt. Teams können Assets sicher löschen, ungenutzte Daten bereinigen und Altsysteme ohne Kollateralschäden außer Betrieb nehmen.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e01c3fa5-234e-44db-9784-9c9cc8c2578b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        Erklärbarkeit von Daten
+    </dt>
+<dd>
+<em>„Wie sind wir auf diese Zahl gekommen?“</em> Das ist eine der häufigsten Fragen, die Datenteams von Stakeholdern aus dem Unternehmen gestellt bekommen – und eine der Fragen, die ohne Data-Lineage-Nachweis schwer zu beantworten sind. Der Data-Lineage-Nachweis verfolgt die Kennzahlen eines Dashboards über alle Transformationen hinweg bis hin zu den Quelldaten zurück und liefert so eine klare Nachverfolgungskette, die Fragen zur Herkunft beantwortet und Vertrauen bei denjenigen schafft, die sich bei ihren Entscheidungen auf die Daten verlassen.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c1c402ff-887c-4dc3-9fd5-5decefe3cc40">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        Weitergabe von Metadaten
+    </dt>
+<dd>
+        Tags, Beschreibungen, PII-Klassifizierungen, Zuweisungen von Eigentumsrechten etc. – die manuelle Pflege dieser Metadaten über Hunderte oder Tausende von nachgelagerten Assets hinweg ist nicht praktikabel. Lineage ermöglicht euch die automatische Weitergabe von Metadaten von der Quelle bis zur Nutzung.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=76c7e0df-0fe5-4f5c-9c73-5718a9b220d1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        Debuggen von ML-Modellen
+    </dt>
+<dd>
+        Wenn die Leistung des Modells nachlässt, liegt die Ursache oft weiter oben in der Verarbeitungskette – eine Schema-Änderung in den Quelldaten, eine Transformation, die nun Nullwerte liefert, oder ein Problem mit der Datenqualität, das sich über die Pipeline bis in die Trainingsdaten ausgebreitet hat. Mithilfe der Lineage können Data-Scientists diese Abhängigkeiten präzise nachverfolgen und genau erkennen, welche Änderungen weiter oben in der Kette welche Modelleingaben beeinflusst haben.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=36141936-8807-4278-ac00-52956015a2b1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.1-Use-Cases">4.2.4.1.1 Use Cases<a class="anchor-link" href="#4.2.4.1.1-Use-Cases">¶</a></h5><dl>
+<dt>
+        AI-Agent Readiness
+    </dt>
+<dd>
+        Da Unternehmen zunehmend KI-Agenten einsetzen, die auf der Grundlage ihrer Daten arbeiten, wird die Data-Lineage zur Grundlage für vertrauenswürdige Antworten. Ein KI-Agent, dessen Antworten über verifizierte Datenpfade bis zu den maßgeblichen Quellen zurückverfolgt werden können, liefert nachvollziehbarere Antworten. Ohne Data-Lineage können KI-Tools zwar plausibel klingende Antworten liefern, diese können jedoch auf veralteten oder falschen Daten basieren – die niemand mit sinnvollem Aufwand mehr überprüfen kann.
+    </dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=713498b8-edc3-4f02-ab79-8a8d4b79babe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cbf2fcdb-7236-4ed1-a688-50d01355e3de">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a href="https://openlineage.io">OpenLineage</a> ist ein offener Standard für die Erfassung von Metadaten und Data-Lineage.</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=be1d961a-c1cc-4762-bf21-4768e503d57d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Ziel ist ein einheitliches Schema zur Beschreibung von Metadaten und Data-Lineage über verschiedene Tools hinweg, um die Erfassung und Analyse zu vereinfachen.</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2a4f6989-607f-4ee3-8b1d-43aa908a2877">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Der Standard definiert einige Schlüsselkonzepte wie <code>Run</code>, <code>Job</code> und <code>Dataset</code>, wobei jeder Provider mithilfe von <code>facets</code> zusätzliche Metadaten hinzuzufügen kann.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7557acc2-2059-42f0-83de-c543e3942c0f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><dl>
+<dt><code>Job</code></dt>
+<dd>Höchste Abstraktionsebene, die einen Prozess darstellt, der Datensätze verbraucht und erzeugt.<br/>
+    In Airflow könnte dies euer DAG (<em>directed acyclic graph</em>) sein; in das jeweilige Modell oder bei Hightouch lässt eine Synchronisierung.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=70fa8047-ade3-48f9-983a-059d1327bd9a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.2-Standards">4.2.4.2 Standards<a class="anchor-link" href="#4.2.4.2-Standards">¶</a></h5><h6 id="4.2.4.2.1-OpenLineage/Marquez">4.2.4.2.1 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.2.1-OpenLineage/Marquez">¶</a></h6><dl>
+<dt><code>Dataset</code></dt>
+<dd>Abstrakte Darstellung von Daten, die sich auf Tabellen in einer Datenbank, eine Ansicht in einem Data Warehouse, eine Datei oder ein Objekt beziehen kann.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2d4d3bc2-a297-4c6d-b123-14acfc8ea274">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><dl>
+<dt><code>Status</code></dt>
+<dd>Job-Status, der mit <code>START</code> beginnt und mit <code>COMPLETE</code>, <code>ABORT</code> oder <code>FAIL</code> endet. <br/>Die Statusübergänge sind mit einem Zeitstempel versehen, was Leistungsanalysen ermöglicht und dabei hilft, potenzielle Engpässe zu identifizieren.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c2713110-578b-4b0e-8ab7-0468a9f60c0f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><dl>
+<dt><code>Run</code></dt>
+<dd>Bestimmte Instanz eines Jobs mit einer eindeutigen Kennung, die dabei hilft, die Ereignisse zu verknüpfen, die die Zustandsänderungen im Zeitverlauf darstellen.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1bfe7e67-8fc2-49df-be12-e7f3b0db31ff">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><dl>
+<dt><code>facets</code></dt>
+<dd>Zusätzliche Metadaten, die entweder einem <code>Job</code>, einem <code>Dataset</code> oder einem <code>Run</code> zugeordnet werden können, um diese Objekte näher zu beschreiben. Es gibt einige integrierte Facetten zur Beschreibung des Schemas der Datensätze,  dem zur Erzeugung des Datensatzes verwendeten -SQL und vieles mehr.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e789f45-2a82-43e2-9d98-58d111e83b16">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><p>Der Standard ist als <a href="https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.json">JSON-Schema</a> formalisiert, was die Arbeit damit und die Validierung vereinfacht.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8cede55b-55f2-41d5-815d-cdaee17bb5f5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Das GitHub-Repository von <a href="https://github.com/OpenLineage/">OpenLineage</a> enthält auch <a href="https://github.com/OpenLineage/OpenLineage/tree/main/client/go">Go</a>- <a href="https://github.com/OpenLineage/OpenLineage/tree/main/client/java">Java</a>- und <a href="https://github.com/OpenLineage/OpenLineage/tree/main/client/python">Python</a>-Clients, doch der Standard ist so einfach, dass das Schreiben eines Clients in jeder beliebigen Sprache relativ unkompliziert sein dürfte.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=615291a2-e6a5-4aba-be82-cad9e797fede">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><p><a href="https://marquezproject.ai/">Marquez</a> speichert und visualisiert OpenLineage-Metadaten und unterstützt darüberhinaus auch Use Cases wie Daten-Governance, Überwachung der Datenqualität und Leistungsanalysen.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=795363a2-5a09-4fdf-9416-ee131571b605">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage/Marquez">4.2.4.1.2 OpenLineage/Marquez<a class="anchor-link" href="#4.2.4.1.2-OpenLineage/Marquez">¶</a></h5><p><a href="marquez.png"><img alt="Marquez User-Interface" src="marquez.png"/></a></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=19ce559c-d4dd-42a3-bd8f-db265eb47e41">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.2-OpenLineage">4.2.4.1.2 OpenLineage<a class="anchor-link" href="#4.2.4.1.2-OpenLineage">¶</a></h5><p>OpenLineage kann in Datenpipeline-Tools, wie <a href="https://openlineage.io/docs/guides/spark/">Spark</a>, <a href="https://openlineage.io/docs/integrations/dbt">dbt</a>, <a href="https://airflow.apache.org/docs/apache-airflow-providers-openlineage/stable/index.html">Airflow</a> und <a href="https://openlineage.io/docs/integrations/great-expectations">Great Expectations</a> integriert werden.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=19a67084-faad-4f42-9ac0-581749371a55">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a href="ol-stack.svg"><img alt="OpenLineage-Stack" src="ol-stack.svg"/></a></p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d8a7a9ab-4108-4d3c-9d72-7b4c1780c660">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Schließlich kann es auch zusammen mit <a href="https://pypi.org/project/pandas-lineage/">pandas</a> verwendet werden.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fa4944dd-a597-4705-8577-d7ded418f13f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.3-PREMIS">4.2.4.1.3 PREMIS<a class="anchor-link" href="#4.2.4.1.3-PREMIS">¶</a></h5><p><a href="https://www.loc.gov/standards/premis">PREMIS</a> (<strong>Pre</strong>servation <strong>M</strong>etadata: <strong>I</strong>mplementation <strong>S</strong>trategies) ist ein weit verbreiteter Standard für die digitale Langzeitarchivierung, der sicherstellt, dass Metadaten Data-Lineage, Rechteverwaltung und strukturelle Beziehungen für eine langfristige Zugänglichkeit umfassen.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6ea6aa61-bc26-4887-ba3f-4fc0644ac6ce">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.3-PREMIS">4.2.4.1.3 PREMIS<a class="anchor-link" href="#4.2.4.1.3-PREMIS">¶</a></h5><p>Das PREMIS-Datenmodell besteht aus vier miteinander verbundenen Entitäten:</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c39bc052-f226-4ee1-8da3-c115f68d87e1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><a href="premis-data-model.svg"><img alt="PREMIS-Datenmodell" src="premis-data-model.svg"/></a></p>
+<p>Quelle: <a href="https://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf">PREMIS Data Dictionary for Preservation MetaData version 3.0, S. 16</a></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=41c5c61c-4c0d-4df2-9b7a-18ce8db25a67">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.3-PREMIS">4.2.4.1.3 PREMIS<a class="anchor-link" href="#4.2.4.1.3-PREMIS">¶</a></h5><p>Die Einträge im <a href="https://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf">PREMIS Data Dictionary</a> umfassen zwölf Attribute:</p>
+<p>Name of the semantic unit, Semantic components, Definition, Rationale, Data Constraint, Object Category, Applicability, Repeatability und Obligation. Creation/Maintenance notes und Usage notes. Lediglich die beiden letztgenannten sind optional.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b8281199-24fa-4ca4-b1c5-e956f9a054c7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="4-Datenarchitektur">4 Datenarchitektur<a class="anchor-link" href="#4-Datenarchitektur">¶</a></h1><h2 id="4.2-Datenarchitektur-Komponenten">4.2 Datenarchitektur-Komponenten<a class="anchor-link" href="#4.2-Datenarchitektur-Komponenten">¶</a></h2><h3 id="4.2.4-Governance-und-Metadaten">4.2.4 Governance und Metadaten<a class="anchor-link" href="#4.2.4-Governance-und-Metadaten">¶</a></h3><h4 id="4.2.4.1-Data-Lineage-und-Beobachtbarkeit">4.2.4.1 Data-Lineage und Beobachtbarkeit<a class="anchor-link" href="#4.2.4.1-Data-Lineage-und-Beobachtbarkeit">¶</a></h4><h5 id="4.2.4.1.3-PREMIS">4.2.4.1.3 PREMIS<a class="anchor-link" href="#4.2.4.1.3-PREMIS">¶</a></h5><div class="alert alert-block alert-info">
+<p><strong>Siehe auch:</strong></p>
+<ul>
+<li>
+<a href="https://www.loc.gov/standards/premis/v3/premis-v3-0.xsd">premis-v3-0.xsd</a>
+</li>
+<li>
+<a href="https://github.com/rochester-rcl/premis-generator">premis-generator</a>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -9511,7 +9907,7 @@ main {
 <a href="https://www.dublincore.org/">Dublin Core (DC)</a>
 </dt>
 <dd>
-        ist ein weit verbreiteter Standard mit 15 grundlegenden Metadatenelementen, der mit <code>source</code>, <code>relation</code>, <code>date</code> und  <code>rights</code> auch Datenherkunft, Rechteverwaltung und strukturelle Beziehungen für eine langfristige Zugänglichkeit angeben kann. Es gibt jedoch auch detailliertere Spezifikationen, siehe <a href="https://www.dublincore.org/specifications/">DCMI Specifications</a>.
+        ist ein weit verbreiteter Standard mit 15 grundlegenden Metadatenelementen, der mit <code>source</code>, <code>relation</code>, <code>date</code> und  <code>rights</code> auch Data-Lineage, Rechteverwaltung und strukturelle Beziehungen für eine langfristige Zugänglichkeit angeben kann. Es gibt jedoch auch detailliertere Spezifikationen, siehe <a href="https://www.dublincore.org/specifications/">DCMI Specifications</a>.
     </dd>
 </dl>
 </div>
