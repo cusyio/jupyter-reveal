@@ -1,8 +1,0 @@
--c constraints.txt
-
-jupyter
-jupyter-contrib-nbextensions
-nbconvert
-plotnine[all]
-altair
-vega_datasets

@@ -1,0 +1,37 @@
+[project]
+name = "jupyter-reveal"
+version = "26.1.0"
+description = "cusy slides"
+readme = "README.rst"
+authors = [
+  { name = "Veit Schiele", email = "veit@cusy.io" },
+]
+requires-python = ">=3.13,<3.15"
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+  "altair",
+  "jupyter",
+  "jupyter-contrib-nbextensions",
+  "jupyter-latex-envs",
+  "nbconvert",
+  "notebook<7",
+  "plotnine[all]",
+  "setuptools<82",
+  "vega-datasets",
+]
+urls."Bug Tracker" = "https://github.com/cusyio/jupyter-reveal/issues"
+urls.Homepage = "https://github.com/cusyio/jupyter-reveal"
+
+[dependency-groups]
+dev = [
+  "prek",
+]
+
+[tool.uv]
+exclude-newer = "P3D"  # "3 days" in RFC 3339 format

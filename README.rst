@@ -80,29 +80,16 @@ Installation
 
    .. code-block:: console
 
-    $ curl -O https://codeload.github.com/cusyio/slides/zip/main
-    $ unzip main
-    Archive:  main
-    …
-       creating: slides-main/
+    $ curl -O https://github.com/cusyio/jupyter-reveal/archive/refs/heads/main.zip
+    $ unzip main.zip
     …
 
-#. Create environment
+#. Create environment and install Python packages
 
    .. code-block:: console
 
-        $ cd slides-main
-        $ python3 -m venv .
-        $ . bin/activate
-
-#. Install Python packages:
-
-   .. code-block:: console
-
-        $ python -m pip install -r requirements.txt
-        $ jupyter nbextension enable highlighter/highlighter
-        Enabling notebook extension highlighter/highlighter...
-              - Validating: OK
+      $ cd jupyter-reveal-main
+      $ uv sync
 
 #. Install the `Jupyter Notebook Extensions
    <https://jupyter-contrib-nbextensions.readthedocs.io/>`_ Javascript and CSS
@@ -110,23 +97,25 @@ Installation
 
    .. code-block:: console
 
-    $ jupyter contrib nbextension install --user
-    jupyter contrib nbextension install --user
-    Installing jupyter_contrib_nbextensions nbextension files to jupyter data directory
-    …
-    Successfully installed jupyter-contrib-core-0.3.3 jupyter-contrib-nbextensions-0.5.1
-    jupyter-highlight-selected-word-0.2.0 jupyter-latex-envs-1.4.6
-    jupyter-nbextensions-configurator-0.4.1
-    …
-    $ jupyter nbextension enable latex_envs --user --py
-    Enabling notebook extension latex_envs/latex_envs...
-          - Validating: OK
+      $ uv run jupyter contrib nbextension install --user
+      Installing jupyter_contrib_nbextensions nbextension files to jupyter data directory
+      …
+      Successfully installed jupyter-contrib-core-0.3.3 jupyter-contrib-nbextensions-0.5.1
+      jupyter-highlight-selected-word-0.2.0 jupyter-latex-envs-1.4.6
+      jupyter-nbextensions-configurator-0.4.1
+      …
+      $ uv run jupyter nbextension enable highlighter/highlighter
+      Enabling notebook extension highlighter/highlighter...
+            - Validating: OK
+      $ uv run jupyter nbextension enable latex_envs --user --py
+      Enabling notebook extension latex_envs/latex_envs...
+            - Validating: OK
 
-#. Start the Jupyter notebook:
+#. Start JupyterLab:
 
    .. code-block:: console
 
-    $  jupyter notebook
+      $  uv run jupyter lab
 
 #. Turn notebooks into slides with
    :menuselection:`View --> Cell Toolbar --> Slideshow`
@@ -138,7 +127,7 @@ Installation
 
    .. code-block:: console
 
-    $ jupyter nbconvert my-slides.ipynb --to slides --post serve
+    $ uv run jupyter nbconvert MY-SLIDES.ipynb --to slides --post serve
 
 #. Fix link to cusy styles
 
