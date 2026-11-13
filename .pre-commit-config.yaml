@@ -13,6 +13,10 @@ repos:
     -   id: check-json
         types: [file]  # override `types: [json]`
         files: \.(json|ipynb)$
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7  # frozen: v1.32.0
+    hooks:
+    - id: zizmor
   - repo: https://github.com/tox-dev/pyproject-fmt
     rev: 50e0f3aee9dc5747a5f173f79a7417403c18dda6 # frozen: v2.30.3
     hooks:
